@@ -1,6 +1,161 @@
 body {
-    padding-bottom: 20px;
+  margin: 0;
 }
 
-#page-wrapper {
+#home-header {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url(images/food-wallpaper-10.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: orange;
 }
+
+#home-navbar {
+  position:absolute;
+  width: 100%;
+  height: 55px;
+  background: white;
+}
+
+#home-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+#home-logotext {
+  position: absolute;
+  display:inline;
+  left:60px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: orange;
+  font-weight: bold;
+  text-emphasis-color: red;
+  margin-bottom: 40px;
+  top:-20px;
+}
+
+#home-becomechef {
+  display: inline;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: orange;
+  text-align: right;
+  float: right;
+  margin: 12px;
+  margin-top: 10px;
+  border:2px solid orange;
+  padding: 8px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+#home-becomechef:visited {
+  text-decoration: none;
+  color: orange;
+  font-family: sans-serif;
+}
+
+#home-becomechef:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.home-navmenu {
+  display: inline;
+  font-family: sans-serif;
+  color:black;
+  text-decoration: none;
+  float: right;
+  margin: 12px;
+  margin-top:12px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.home-navmenu:hover {
+  color: rgba(0,0,0,0.3);
+}
+
+#home-welcometext-div {
+  position: absolute;
+  background-color: black;
+  width: 800px;
+  height: 300px;
+  top:50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left:-400px;
+}
+
+#home-welcomefoodcourt{
+  color:white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+}
+
+#home-firststrangerthenfriends {
+  color:white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+#home-getstarted {
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color:white;
+  text-decoration: none;
+}
+
+#home-getstarted:link {
+  font-family: sans-serif;
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 50%;
+  margin-right: -60px;
+}
+
+#home-getstarted:visited {
+  font-family: sans-serif;
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding:2px;  
+}
+
+#home-getstarted:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+#home-searchbar {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0,0,0,0.7);
+  bottom:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
