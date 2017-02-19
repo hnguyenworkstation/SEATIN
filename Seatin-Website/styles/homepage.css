@@ -6,7 +6,7 @@ body {
   position: relative;
   width: 100%;
   height: 600px;
-  background-image: url(images/food-wallpaper-10.jpg);
+  background-image: url('images/pizza.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: orange;
@@ -141,7 +141,7 @@ body {
   background-color: rgba(0,0,0,0.2);
 }
 
-#home-searchbar {
+#home-searchdiv {
   position: absolute;
   width: 100%;
   height: 100px;
@@ -149,9 +149,57 @@ body {
   bottom:0px;
 }
 
+#home-searchbar {
+  position: absolute;
+  width: 800px;
+  height: 40px;
+  background-color: white;
+  top:50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -400px;
+  border-radius: 3px;
+}
 
+#home-searchbox {
+  position: absolute;
+  width: 800px;
+  height: 40px;
+  margin-top: -3px;
+}
 
+#home-search_text {
+  color: grey;
+  font-family: sans-serif;
+  margin-left: 15px;
+}
 
+#home-search-button {
+  position: absolute;
+  width: 110px;
+  height: 40px;
+  float: right;
+  margin-left: 690px;
+}
+
+#search-button {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: bold;
+  background-color: orange;
+  text-decoration: none;
+  padding: 11px 30px 11px 30px; 
+}
+
+#search-button:visited {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#search-button:hover {
+  background-color: darkorange;
+}
 
 
 
