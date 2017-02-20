@@ -1,0 +1,569 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+@import "breakpoint";
+
+body {
+  font-size: 1em;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+#home-header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('../images/food-wallpaper-18.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: orange;
+}
+
+#home-navbar {
+  position:fixed;
+  width: 100%;
+  height: 55px;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #3D6AA2;
+}
+
+#home-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+#home-logotext {
+  position: absolute;
+  display:inline;
+  left:60px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: orange;
+  font-weight: bold;
+  text-emphasis-color: red;
+  margin-top: 26px;
+  top:-20px;
+}
+
+#home-becomechef {
+  display: inline;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: orange;
+  text-align: right;
+  float: right;
+  margin: 12px;
+  margin-top: 10px;
+  border:2px solid orange;
+  padding: 8px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+#home-becomechef:visited {
+  text-decoration: none;
+  color: orange;
+  font-family: sans-serif;
+}
+
+#home-becomechef:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.home-navmenu {
+  display: inline;
+  font-family: sans-serif;
+  color:black;
+  text-decoration: none;
+  float: right;
+  margin: 12px;
+  margin-top:12px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.home-navmenu:hover {
+  color: rgba(0,0,0,0.3);
+}
+
+#home-welcometext-div {
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  top:40%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left:-400px;
+}
+
+#home-welcomefoodcourt{
+  color:floralwhite;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#home-firststranger-thenfriends {
+  color:floralwhite;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#home-getstarted {
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color:white;
+  text-decoration: none;
+  top:65%;
+  margin-top: 20px;
+}
+
+#home-getstarted:link {
+  font-family: sans-serif;
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 50%;
+  margin-right: -60px;
+}
+
+#home-getstarted:visited {
+  font-family: sans-serif;
+  color:white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding:2px;  
+}
+
+#home-getstarted:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+#home-searchdiv {
+  position: absolute;
+  width: 760px;
+  height: 200px;
+  background-color: rgba(0,0,0,0.7);
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+#home-searchbar {
+  position: absolute;
+  width: 600px;
+  height: 40px;
+  background-color: white;
+  top:53%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -350px;
+  border-radius: 3px;
+}
+
+#home-searchbox {
+  position: absolute;
+  width: 760px;
+  height: 35px;
+  margin-top: -3px;
+}
+
+#home-search_text {
+  color: grey;
+  font-family: sans-serif;
+  margin-left: 15px;
+  font-size: 20px;
+  z-index: 0;
+  margin-top: 8px;
+  text-align: left;
+}
+
+#home-search-button {
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  float: right;
+  margin-left: 590px;
+  z-index: 0;
+  margin-top: -1px;
+}
+
+#search-button {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: bold;
+  background-color: orange;
+  text-decoration: none;
+  padding: 11px 30px 11px 30px;
+}
+
+#search-button:visited {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#search-button:hover {
+  background-color: darkorange;
+}
+
+#home-seach-options {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: bold;
+  text-decoration: none;
+  margin-top: -30px;
+  margin-left: -10px;
+}
+
+.home-search-option-box {
+  position: absolute;
+  display:inline;
+  width: 190px;
+  height: 80px;
+  border-right: 1px solid white;
+  margin-top: 30px;
+  top: 20%;
+  text-align: center;
+}
+
+.home-search-option-box:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+#search-chef-box {
+  margin-left: 10px;
+}
+
+.search-text {
+  text-align: center;
+  display: inline;
+  font-family: sans-serif;
+  text-decoration: none;
+  float: right;
+  padding: 8px;
+  font-weight: lighter;
+  margin-top: -15px;
+  margin-right: 15px;
+}
+
+#search-chef {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.search-logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+
+#search-chef-logo {
+  top: 30%;
+  right: 30%;
+}
+
+.search-text:visited {
+  color: white;
+}
+
+#search-food-logo {
+  top: 30%;
+}
+
+#search-food-box {
+  margin-left: 200px;
+}
+
+#search-food:visited {
+  color: white;
+  text-align: center;
+}
+
+#search-place-box {
+  margin-left: 390px;
+}
+
+#search-place-logo {
+  margin-right: 10px;
+}
+
+#search-place {
+  margin-right: 33px;
+}
+
+#search-learnmore-box {
+  position: absolute;
+  display:inline;
+  width: 190px;
+  height: 80px;
+  margin-top: 30px;
+  top: 20%;
+  text-align: center;
+  margin-left: 580px;
+}
+
+#search-learnmore-box:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+#search-learnmore-logo {
+  margin-right:19px;
+}
+
+#search-learnmore {
+  margin-right:19px;
+}
+
+#side-menu-div {
+  width: 200px;
+  height: 1000px;
+  position: absolute;
+}
+
+.side-menu { /* Full screen nav menu */
+    width: 240px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: absolute; 
+    box-sizing: border-box;
+    display: block;
+    background: #f1f1f1;
+    overflow-y: scroll;
+    margin-left: 10px;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 4.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0px,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0px,0,0);
+    padding: 20px;
+    height: 100%;
+    
+  h3 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: #656565;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  ul {
+    padding: 0;
+    margin: 0 0 25px;
+    
+  }
+  li {
+    text-align: left;
+    list-style: none;
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    a {
+      text-decoration: none;
+      font-size: 21px;
+      color: #999;
+      line-height: 40px;
+      &:hover {
+        color: #01a5e2;
+        &::before {
+           content: "";
+           position: absolute;
+           background: #01a5e2; 
+           width: 4px;
+           height: 28px;
+           display: block;
+           left: -20px;
+           margin-top: 6px;
+        }
+      }
+    } 
+  }
+}
+
+#body-wrapper {
+  position: relative;
+  margin-top: -20px;
+}
+
+#content-wrapper {
+  width: 90%;
+  margin: 2% auto;
+  margin-left: 260px;
+}
+
+* {
+  @include transition-property(
+    background-color,
+    border-color,
+    box-shadow,
+    color,
+    opacity,
+    text-shadow,
+    transform
+  );
+  @include transition-duration(0.2s);
+  @include transition-timing-function(linear);
+}
+
+#newest-disc-tab {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.cards {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	padding: 1.5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.card {
+	@media (max-width: 700px) {
+		width: 100%;
+	}
+	position: relative;
+	margin-bottom: 20px; 
+	padding-bottom: 30px; 
+	background: #fefff9;
+	color: #363636;
+	text-decoration: none;
+	@include box-shadow(rgba(black, 0.19) 0 0 8px 0);
+	@include border-radius(4px);
+	@include breakpoint(700px, $no-query: true) {
+		max-width: 320px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+	@include breakpoint(980px, $no-query: true) {
+		&:nth-child(even) {
+			margin-right: 20px;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	span {
+		display: block;
+	}
+	.card-summary {
+		padding: 5% 5% 3% 5%;
+	}
+	.card-header {
+		position: relative;
+		height: 175px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: rgba(white,.15);
+ 		background-blend-mode: overlay;
+		@include border-radius(4px 4px 0 0);
+		&:hover, &:focus {
+			background-color: rgba(white, 0);
+		}
+	}
+	.card-title {
+		background: rgba(157, 187, 63, .85);
+		padding: 3.5% 0 2.5% 0;
+		color: white;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		h3 {
+			font-size: 1.2em;
+			line-height: 1.2;
+			padding: 0 3.5%;
+			margin: 0;
+		}
+	}
+	.card-meta {
+		max-height: 0;
+		overflow: hidden;
+		color: #666;
+		font-size: .78em;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 5%;
+		padding: 0 5%;
+		@include transition-property(max-height);
+		@include transition-duration(.4s);
+		@include transition-timing-function(ease-in-out);
+	}
+	&:hover, &:focus {
+		background: white;
+	  @include box-shadow(rgba(black, 0.45) 0px 0px 20px 0px);
+		.card-title {
+			background: rgba(157, 187, 63, .95);
+		}
+		.card-meta {
+			max-height: 1em;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
