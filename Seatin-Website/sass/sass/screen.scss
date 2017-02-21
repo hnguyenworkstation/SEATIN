@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "compass";
 @import "breakpoint";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 
 body {
   font-size: 1em;
@@ -54,7 +55,7 @@ body {
   color: orange;
   font-weight: bold;
   text-emphasis-color: red;
-  margin-top: 35px;
+  margin-top: 25px;
   top:-20px;
 }
 
@@ -125,7 +126,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -25px;
 }
 
 #home-getstarted {
@@ -418,9 +419,15 @@ body {
 	.card-summary {
 		padding: 5% 5% 3% 5%;
 	}
+  .card-summary p {
+    max-height: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 	.card-header {
 		position: relative;
-		height: 175px;
+		height: 195px;
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -438,8 +445,9 @@ body {
 		color: white;
 		font-family: 'Roboto Condensed', sans-serif;
 		text-transform: uppercase;
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		top: 0;
+    height: 70px;
 		width: 100%;
 		h3 {
 			font-size: 1.2em;
@@ -458,7 +466,7 @@ body {
 		bottom: 5%;
 		padding: 0 5%;
 		@include transition-property(max-height);
-		@include transition-duration(.4s);
+		@include transition-duration(.2s);
 		@include transition-timing-function(ease-in-out);
 	}
 	&:hover, &:focus {
@@ -468,11 +476,127 @@ body {
 			background: rgba(157, 187, 63, .95);
 		}
 		.card-meta {
-			max-height: 1em;
+			max-height: 2em;
 		}
 	}
 }
 
 img {
 	max-width: 100%;
+}
+
+.card-chef-name {
+  margin: 0;
+  height: 80px;
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 35px;
+  position: relative;
+}
+
+.card-chef-name h5,
+.card-chef-name span {
+  left:25%;
+  position: absolute;
+  opacity: 0.8;
+  padding: 3px 5px;
+  margin-top:-20px;
+}
+
+.card-chef-name h5 {
+  text-transform: uppercase;
+  bottom: 70%;
+  margin: 0;
+  font-weight: 800;
+  color: #000000;
+}
+
+.card-chef-name span {
+  font-size: 0.8em;
+  color: #ffffff;
+  top: 50%;
+}
+
+.card-chef-name img {
+  max-width: 100%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+  margin-top: -6px;
+}
+
+// STARS
+$font-size: 20px; // <-- Adjust this only!
+$star-width: 1em;
+
+.disc-rating {
+  width: 90px;
+  height: 25px;
+  bottom: 0px;
+  float: right;
+  margin-top: 20px;
+  margin-right: -20px;
+}
+
+.rating {
+  margin: 10px 0;
+}
+
+.rating i {
+  display: inline-block;
+  width: 0;
+  height: $star-width;
+  border-width: 0 ( $star-width / 2 );
+  border-style: solid;
+  border-color: #eee;
+  border-radius: .22em;
+  color: white;
+  background: #eee;
+  font-style: normal;
+  line-height: $star-width + 0.1em;
+  text-indent: -0.5em;
+  text-shadow: 1px 0 1px hsl(0, 0%, 70%);
+}
+
+
+/** Colors */
+@function stars-color($num) {
+  $colors: #cc8b1f #dcb228 #f0991e #f26a2c #dd050b;
+  @return if($num <= length($colors), nth($colors, $num), #333);
+}
+
+@for $i from 1 to 5 {
+  @for $j from 1 through $i {
+    [data-rating^='#{$i}'] .star-#{$j} {
+      border-color: stars-color($i);
+      // set background to avoid tiny lines between borders in print.
+      background: stars-color($i);
+    }
+  }
+  [data-rating^='#{$i}.5'] .star-#{$i+1} {
+    border-left-color: stars-color($i);
+  }
+}
+
+[data-rating="5"] i {
+  $color: stars-color(5);
+  background: $color;
+  border-color: $color;
+}
+
+/** Print */
+@media print {
+  .rating {
+    -webkit-print-color-adjust: exact;
+    i {
+      text-shadow: none;
+    }
+  }
 }
