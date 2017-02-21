@@ -1,5 +1,6 @@
 jQuery(function($) {
   'use strict';
+  var currentItem = 0;
 
   // -------------------------------------------------------------
   //   Basic Navigation
@@ -30,13 +31,22 @@ jQuery(function($) {
       clickBar: 1,
 
       // Buttons
-      prev: $wrap.find('.swiper-button-prev'),
-      next: $wrap.find('.swiper-button-next')
+      prevPage: $wrap.find('.swiper-button-prev'),
+      nextPage: $wrap.find('.swiper-button-next')
     });
     
+    $wrap.find('.swiper-button-next').on('click', function() {
+      currentItem += 3;
+      if (currentItem >= $slidee.children().length - 10) {
+        for (i = 0; i < 20; i++) { 
+            $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+        }
+      }
+    });
+  
     // Add item
     $wrap.find('.add').on('click', function() {
-      $frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+      $frame.sly.add('<li>' + $slidee.children().length + '</li>', $slidee.children().length -1);
     });
   }());
 
@@ -100,8 +110,8 @@ jQuery(function($) {
       clickBar: 1,
 
       // Buttons
-      prev: $wrap.find('.swiper-button-prev'),
-      next: $wrap.find('.swiper-button-next')
+      prevPage: $wrap.find('.swiper-button-prev'),
+      nextPage: $wrap.find('.swiper-button-next')
     });
   }());
 
@@ -177,8 +187,8 @@ jQuery(function($) {
       startPaused: 1,
 
       // Buttons
-      prevPage: $wrap.find('.prevPage'),
-      nextPage: $wrap.find('.nextPage')
+      prevPage: $wrap.find('.swiper-button-prev'),
+      nextPage: $wrap.find('.wiper-button-next')
     });
   }());
 
@@ -209,8 +219,8 @@ jQuery(function($) {
       clickBar: 1,
 
       // Buttons
-      prev: $wrap.find('.swiper-button-prev'),
-      next: $wrap.find('.swiper-button-next')
+      prevPage: $wrap.find('.swiper-button-prev'),
+      nextPage: $wrap.find('.swiper-button-next')
     });
   }());
 });

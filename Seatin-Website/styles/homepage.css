@@ -885,3 +885,8 @@ img {
 .frame ul li card a {
   margin-top: -30px;
 }
+
+/* line 665, ../sass/screen.scss */
+.swiper-button-next, .swiper-button-prev {
+  z-index: 999;
+}
