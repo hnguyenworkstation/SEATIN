@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+"Hello world"
+
+<form method=post>
+  <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+  	 {{form.what.label}}  <br> {{form.what}} <br>
+  	 {{form.when.label}}  <br> {{form.when}} <br>
+  	 {{form.where.label}}  <br> {{form.where}} <br>
+  	 {{form.diners.label}} <br>  {{form.diners}} <br>
+  	 {{form.submit}} 
+  </div>
+</form>
+
+{% endblock %}

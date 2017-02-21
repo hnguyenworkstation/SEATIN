@@ -12,6 +12,7 @@
 bin/
 gen/
 out/
+Seat-Flask/env
 
 # Gradle files
 .gradle/
@@ -38,3 +39,6 @@ captures/
 
 # Keystore files
 *.jks
+
+# python intepreter file
+.pyc
