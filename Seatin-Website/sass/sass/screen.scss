@@ -660,6 +660,30 @@ $star-width: 1em;
 
 .frame ul li card a {
   margin-top: -30px;
+  .card-meta {
+		max-height: 0;
+		overflow: hidden;
+		color: #666;
+		font-size: .78em;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 2%;
+		padding: 0 5%;
+		@include transition-property(max-height);
+		@include transition-duration(.2s);
+		@include transition-timing-function(ease-in-out);
+	}
+  
+	&:hover, &:focus {
+		background: white;
+	  @include box-shadow(rgba(black, 0.45) 0px 0px 20px 0px);
+		.card-title {
+			background: rgb(239, 155, 72, 0.4);
+		}
+		.card-meta {
+			max-height: 2em;
+		}
+	}
 }
 
 .swiper-button-next, .swiper-button-prev{
