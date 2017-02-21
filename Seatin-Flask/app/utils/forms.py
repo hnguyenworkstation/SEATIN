@@ -41,14 +41,18 @@ Validator            Description
 	NoneOf               Validates that the input is none of a list of possible values
 """
 class SearchForm(Form):
-	what   =  StringField( en['PH_WHAT']  )
-	where  =  StringField( en['PH_WHERE'] )
-	when   =  SelectField( en['PH_WHEN'], validators = [Require()])
-	diners = IntegerField(                validators = [Require()],        default = 1 )
-	option =  SelectField( choices = [(1, en['EATIN']),(2, en['PICKUP'])], default = 1])
+	what    =  StringField( en['TITLE_WHAT']  )
+	where   =  StringField( en['TITLE_WHERE'] )
+	when    =  SelectField( en['TITLE_WHEN'],  validators = [Required()])
+	diners  = IntegerField( en['TITLE_DINERS'],validators = [Required()])
+	#options =  SelectField( en['TITLE_DINING_OPTION'],choices = {'in': en['EATIN'],
+	 #                                                            'pick': en['PICKUP']}, coerce = str)
+	submit  =  SubmitField( en['TITLE_SEARCH'])
+	
 class SignUpForm(Form):
-	first_name  =   StringField( en['PH_FIRST_NAME']  , validators = [ Required(en['FIRST_NAME_REQ']), Length(max = 50) ])
-	middle_name =   StringField( en['PH_MIDDLE_NAME'] )
-	last_name   =   StringField( en['PH_LAST_NAME']   , validators = [ Required(en['LAST_NAME_REQ']), Length(max = 50) ])
-	email       =   StringField( en['PH_EMAIL']       , validators = [ Required(en['EMAIL_REQ']), Email() ])
-	password    = PasswordField( en['PH_PASSWORD']  , validators = [ Required(en['PASSWORD_REQ']), Length(min = 8)])
+	first_name  =   StringField( en['TITLE_FIRST_NAME']  , validators = [ Required(en['FIRST_NAME_REQ']), Length(max = 50) ])
+	middle_name =   StringField( en['TITLE_MIDDLE_NAME'] )
+	last_name   =   StringField( en['TITLE_LAST_NAME']   , validators = [ Required(en['LAST_NAME_REQ']), Length(max = 50) ])
+	email       =   StringField( en['TITLE_EMAIL']       , validators = [ Required(en['EMAIL_REQ']), Email() ])
+	password    = PasswordField( en['TITLE_PASSWORD']  , validators = [ Required(en['PASSWORD_REQ']), Length(min = 8)])
+	submit      =   SubmitField( en['TITLE_SUBMIT'] )
