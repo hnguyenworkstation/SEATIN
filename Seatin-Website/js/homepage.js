@@ -44,31 +44,31 @@ var dummy_names = [
   "Loree Gambrel ", 
   "Ming Nuckles",
   "Noella Folger",  
-  "Eliseo Marro " ,
-  "Zora Marinelli" , 
-  "Rubi Owen"  ,
+  "Eliseo Marro ",
+  "Zora Marinelli", 
+  "Rubi Owen",
   "Belva Passman",  
-  "Britt Yager"  ,
+  "Britt Yager",
   "Ivan Stickland",  
   "Jaquelyn Kemper",  
-  "Brandon Pasek"  ,
+  "Brandon Pasek",
   "August Pridgeon" , 
-  "Nancey Yates " ,
-  "Mignon Wedel"  ,
+  "Nancey Yates",
+  "Mignon Wedel",
   "Erasmo Spadaro ", 
-  "Kathlyn Cao"  ,
-  "Venita Harr"  ,
+  "Kathlyn Cao",
+  "Venita Harr",
   "Clay Billy ",
   "Anette Hastie",
   "Alejandrina Bunt",  
-  "Nakita Wohlwend"  ,
-  "Tierra Drain"  ,
-  "Kera Rogan"  ,
-  "Cuc Belford"  ,
+  "Nakita Wohlwend",
+  "Tierra Drain",
+  "Kera Rogan",
+  "Cuc Belford",
   "Joycelyn Aybar",  
-  "Trina Loveday"  ,
-  "Aiko Ropp"  ,
-  "Rea Yunker"  ,
+  "Trina Loveday",
+  "Aiko Ropp",
+  "Rea Yunker",
   "Jeni Hardnett",  
   "Heidy Lafayette"
 ]
@@ -79,7 +79,21 @@ $.ajaxSetup({
   cache: false
 });
 
-window.onload = function() {
+function addFoodCard(food_url, food_name, chef_profile_url, chef_name, rating, reviews, overall, isOpen) {
+  var status = "Closed";
+  if (isOpen) {
+    status = "Opened";
+  }
+  
+  var inner_html = '<li><a class="card" href="#"><span class="card-header" style="' + food_url + '"></span><span class="card-title"><div class="card-chef-name"><img src="' + chef_profile_url + '" alt="sq-sample12"/><h5>' + food_name + '</h5><span>' + chef_name + '</span><div class="card-status-div"><div class="circle"></div><p class="status">'+ status + '</p></div><div class="disc-rating"><div class="rating" data-rating="' + overall.toString() + '"><i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i><p>(' + reviews.toString() + ' reviews)</p></div></div></div></span><span class="card-meta">Published: June 18th, 2015</span></a></li>';
+  
+  console.log(inner_html);
+  
+  document.getElementById("popular-stref-list").innerHTML += inner_html;
+}
+
+window.onpaint = function() {
+  console.log(document.getElementById('home-disc-content').innerHTML);
   var isOpen = (Math.floor(Math.random() * 1) == 0 ? false : true);
 
   for (var i = 0; i < 50; i++) {
@@ -87,25 +101,12 @@ window.onload = function() {
        , dummy_names[Math.floor(Math.random() * 28)]
        , dummy_user_urls[Math.floor(Math.random() * 9)]
        , dummy_names[Math.floor(Math.random() * 28)]
-       , Math.floor(Math.random() * 5)
-       , Math.floor(Math.random() * 10000)
-       , Math.floor(Math.random() * 5)
+       , (Math.floor(Math.random() * 5)).toString()
+       , (Math.floor(Math.random() * 10000)).toString()
+       , (Math.floor(Math.random() * 5)).toString()
        , isOpen);
   }
 };
-
-function addFoodCard(food_url, food_name, chef_profile_url, chef_name, rating, reviews, overall, isOpen) {
-  var status = "Closed";
-  if (isOpen == true) {
-    status = "Opened";
-  }
-  
-  var inner_html = '<li><a class="card" href="#"><span class="card-header" style="' + food_url + '"></span><span class="card-title"><div class="card-chef-name"><img src="' + chef_profile_url + '" alt="sq-sample12"/><h5>' + food_name + '</h5><span>' + chef_name + '</span><div class="card-status-div"><div class="circle"></div><p class="status">'+ status + '</p></div><div class="disc-rating"><div class="rating" data-rating="' + overall.toString() + '"><i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i><p>(' + reviews.toString() + ' reviews)</p></div></div></div></span><span class="card-meta">Published: June 18th, 2015</span></a></li>';
-  
-  document.getElementById('horizontal-card-list').innerHTML += inner_html;
-  
-  console.log("get here!");
-}
 
 /* Get script for each toggable tabs
   in home page */
