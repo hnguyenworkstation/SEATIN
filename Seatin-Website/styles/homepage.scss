@@ -1,16 +1,8 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
 @import "compass";
-@import "breakpoint";
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import '~breakpoint-sass/stylesheets/breakpoint';
 
 body {
   font-size: 1em;
-  background: #e8e8e8;
   font-family: sans-serif;
   overflow-x: hidden;
   font-family: "franklin-gothic-urw-cond";
@@ -23,7 +15,7 @@ body {
   position: relative;
   width: 100%;
   height: 500px;
-  background-image: url('../images/foodtable.jpg');
+  background-image: url('../images/food-wallpaper-18.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: orange;
@@ -56,7 +48,7 @@ body {
   color: orange;
   font-weight: bold;
   text-emphasis-color: red;
-  margin-top: 25px;
+  margin-top: 26px;
   top:-20px;
 }
 
@@ -112,7 +104,7 @@ body {
 }
 
 #home-welcomefoodcourt{
-  color:orange;
+  color:floralwhite;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: bold;
@@ -122,12 +114,12 @@ body {
 }
 
 #home-firststranger-thenfriends {
-  color:orange;
+  color:floralwhite;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  margin-top: -25px;
+  margin-top: 10px;
 }
 
 #home-getstarted {
@@ -339,18 +331,109 @@ body {
   margin-right:19px;
 }
 
+#side-menu-div {
+  width: 200px;
+  height: 1000px;
+  position: absolute;
+}
+
+.side-menu { /* Full screen nav menu */
+    width: 240px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: absolute; 
+    box-sizing: border-box;
+    display: block;
+    background: #f1f1f1;
+    overflow-y: scroll;
+    margin-left: 10px;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 4.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0px,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0px,0,0);
+    padding: 20px;
+    height: 100%;
+    
+  h3 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: #656565;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  ul {
+    padding: 0;
+    margin: 0 0 25px;
+    
+  }
+  li {
+    text-align: left;
+    list-style: none;
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    a {
+      text-decoration: none;
+      font-size: 21px;
+      color: #999;
+      line-height: 40px;
+      &:hover {
+        color: #01a5e2;
+        &::before {
+           content: "";
+           position: absolute;
+           background: #01a5e2; 
+           width: 4px;
+           height: 28px;
+           display: block;
+           left: -20px;
+           margin-top: 6px;
+        }
+      }
+    } 
+  }
+}
+
 #body-wrapper {
   position: relative;
   margin-top: -20px;
 }
 
-.nav-tabs {
-  margin-left: 50px;
-}
-
 #content-wrapper {
   width: 90%;
   margin: 2% auto;
+  margin-left: 260px;
 }
 
 * {
@@ -420,15 +503,9 @@ body {
 	.card-summary {
 		padding: 5% 5% 3% 5%;
 	}
-  .card-summary p {
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-decoration: none;
-  }
 	.card-header {
 		position: relative;
-		height: 195px;
+		height: 175px;
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -441,14 +518,13 @@ body {
 		}
 	}
 	.card-title {
-		background: rgba(white, .45);
+		background: rgba(157, 187, 63, .85);
 		padding: 3.5% 0 2.5% 0;
 		color: white;
 		font-family: 'Roboto Condensed', sans-serif;
 		text-transform: uppercase;
-		position: relative;
-		top: 0;
-    height: 70px;
+		position: absolute;
+		bottom: 0;
 		width: 100%;
 		h3 {
 			font-size: 1.2em;
@@ -464,10 +540,10 @@ body {
 		font-size: .78em;
 		text-transform: uppercase;
 		position: absolute;
-		bottom: 2%;
+		bottom: 5%;
 		padding: 0 5%;
 		@include transition-property(max-height);
-		@include transition-duration(.2s);
+		@include transition-duration(.4s);
 		@include transition-timing-function(ease-in-out);
 	}
 	&:hover, &:focus {
@@ -477,191 +553,11 @@ body {
 			background: rgba(157, 187, 63, .95);
 		}
 		.card-meta {
-			max-height: 2em;
+			max-height: 1em;
 		}
 	}
 }
 
 img {
 	max-width: 100%;
-}
-
-.card-chef-name {
-  margin: 0;
-  height: 80px;
-  display: block;
-  text-align: left;
-  color: #ffffff;
-  padding: 0 35px;
-  position: relative;
-}
-
-.card-chef-name h5,
-.card-chef-name span {
-  left:25%;
-  position: absolute;
-  opacity: 0.8;
-  padding: 3px 5px;
-  margin-top:-20px;
-}
-
-.card-chef-name h5 {
-  text-transform: uppercase;
-  bottom: 70%;
-  margin: 0;
-  font-weight: 800;
-  color: #000000;
-}
-
-.card-chef-name span {
-  font-size: 0.8em;
-  color: #ffffff;
-  top: 50%;
-}
-
-.card-chef-name img {
-  max-width: 100%;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-right: 5px;
-  display: block;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  margin-left: 10px;
-  margin-top: -6px;
-}
-
-// STARS
-$font-size: 20px; // <-- Adjust this only!
-$star-width: 1em;
-
-.disc-rating {
-  width: 90px;
-  height: 25px;
-  bottom: 0px;
-  float: right;
-  margin-top: 20px;
-  margin-right: -20px;
-}
-
-.rating {
-  margin: 10px 0;
-}
-
-.rating i {
-  display: inline-block;
-  width: 0;
-  height: $star-width;
-  border-width: 0 ( $star-width / 2 );
-  border-style: solid;
-  border-color: #eee;
-  border-radius: .22em;
-  color: white;
-  background: #eee;
-  font-style: normal;
-  line-height: $star-width + 0.1em;
-  text-indent: -0.5em;
-  text-shadow: 1px 0 1px hsl(0, 0%, 70%);
-}
-
-
-/** Colors */
-@function stars-color($num) {
-  $colors: #cc8b1f #dcb228 #f0991e #f26a2c #dd050b;
-  @return if($num <= length($colors), nth($colors, $num), #333);
-}
-
-@for $i from 1 to 5 {
-  @for $j from 1 through $i {
-    [data-rating^='#{$i}'] .star-#{$j} {
-      border-color: stars-color($i);
-      // set background to avoid tiny lines between borders in print.
-      background: stars-color($i);
-    }
-  }
-  [data-rating^='#{$i}.5'] .star-#{$i+1} {
-    border-left-color: stars-color($i);
-  }
-}
-
-[data-rating="5"] i {
-  $color: stars-color(5);
-  background: $color;
-  border-color: $color;
-}
-
-/** Print */
-@media print {
-  .rating {
-    -webkit-print-color-adjust: exact;
-    i {
-      text-shadow: none;
-    }
-  }
-}
-
-.horizontal-slide-div {
-  position: relative;
-  margin: 3em 0;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5%;
-}
-
-.horizontal-scrollbar {
-  margin: 0 0 1em 0;
-  height: 2px;
-  background: #ccc;
-  line-height: 0;
-}
-
-.horizontal-scrollbar .hscroll-handle {
-  width: 100px;
-  height: 100%;
-  background: #292a33;
-  cursor: pointer;
-}
-
-.horizontal-scrollbar .hscroll-handle .hscroll-mousearea {
-  position: absolute;
-  top: -9px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-}
-
-.frame {
-  height: 300px;
-  line-height: 300px;
-  overflow: hidden;
-}
-
-.frame ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-size: 14px;
-}
-
-.frame ul li {
-  float: left;
-  width: 327px;
-  height: 100%;
-  margin: 0 20px 0 0;
-  padding: 0;
-  background: rgba(white, 0.0);
-  color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.frame ul li card a {
-  margin-top: -30px;
-}
-
-.swiper-button-next, .swiper-button-prev{
-  z-index: 999;
 }
