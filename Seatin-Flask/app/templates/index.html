@@ -1,16 +1,16 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
-{% block body %}
-"Hello world"
+{% block title %}Flasky{% endblock %}
 
-<form method=post>
-  <div style = font-size:20px; font-weight:bold; margin-left:150px;>
-  	 {{form.what.label}}  <br> {{form.what}} <br>
-  	 {{form.when.label}}  <br> {{form.when}} <br>
-  	 {{form.where.label}}  <br> {{form.where}} <br>
-  	 {{form.diners.label}} <br>  {{form.diners}} <br>
-  	 {{form.submit}} 
-  </div>
-</form>
-
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+    {% if not known %}
+    <p>Pleased to meet you!</p>
+    {% else %}
+    <p>Happy to see you again!</p>
+    {% endif %}
+</div>
+{{ wtf.quick_form(form) }}
 {% endblock %}
