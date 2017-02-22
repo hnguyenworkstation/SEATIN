@@ -100,7 +100,7 @@ function addFoodCard(food_url, food_name, chef_profile_url, chef_name, rating, r
     status = "Opened";
   }
   
-  var inner_html = '<li><a class="card" href="#"><span class="card-header" style="' + food_url '"></span><span class="card-title"><div class="card-chef-name"><img src="' + chef_profile_url + '" alt="sq-sample12"/><h5>' + food_name + '</h5><span>' + chef_name + '</span><div class="card-status-div"><div class="circle"></div><p class="status">'+ status + '</p></div><div class="disc-rating"><div class="rating" data-rating="' + overall.toString() + '"><i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i><p>(' + reviews.toString() + ' reviews)</p></div></div></div></span><span class="card-meta">Published: June 18th, 2015</span></a></li>';
+  var inner_html = '<li><a class="card" href="#"><span class="card-header" style="' + food_url + '"></span><span class="card-title"><div class="card-chef-name"><img src="' + chef_profile_url + '" alt="sq-sample12"/><h5>' + food_name + '</h5><span>' + chef_name + '</span><div class="card-status-div"><div class="circle"></div><p class="status">'+ status + '</p></div><div class="disc-rating"><div class="rating" data-rating="' + overall.toString() + '"><i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i><p>(' + reviews.toString() + ' reviews)</p></div></div></div></span><span class="card-meta">Published: June 18th, 2015</span></a></li>';
   
   document.getElementById('horizontal-card-list').innerHTML += inner_html;
   
