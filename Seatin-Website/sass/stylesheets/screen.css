@@ -690,7 +690,7 @@ img {
 
 /* line 540, ../sass/screen.scss */
 .disc-rating {
-  width: 90px;
+  width: 140px;
   height: 25px;
   bottom: 0px;
   float: right;
@@ -882,11 +882,104 @@ img {
 }
 
 /* line 661, ../sass/screen.scss */
-.frame ul li card a {
-  margin-top: -30px;
+.circle {
+  width: 5px;
+  height: 5px;
+  background-color: limegreen;
+  border-radius: 50%;
+  margin-top: 2px;
 }
 
-/* line 665, ../sass/screen.scss */
+/* line 669, ../sass/screen.scss */
+.status {
+  color: grey;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+/* line 676, ../sass/screen.scss */
+.frame a .card-title {
+  background: rgba(253, 234, 215, 0.9);
+}
+/* line 680, ../sass/screen.scss */
+.frame a .card-status-div {
+  width: 100px;
+  height: 15px;
+  display: inline;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+}
+/* line 690, ../sass/screen.scss */
+.frame a .card-status-div .status {
+  margin-left: 8px;
+  margin-top: -8px;
+}
+/* line 695, ../sass/screen.scss */
+.frame a .card-meta {
+  max-height: 0;
+  overflow: hidden;
+  color: #666;
+  font-size: .78em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 2%;
+  padding: 0 5%;
+  -moz-transition-property: max-height;
+  -o-transition-property: max-height;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 709, ../sass/screen.scss */
+.frame a .card-title span {
+  color: brown;
+  margin-top: -28px;
+}
+/* line 714, ../sass/screen.scss */
+.frame a .card-title h5 {
+  margin-bottom: 5px;
+}
+/* line 718, ../sass/screen.scss */
+.frame a .disc-rating {
+  font-size: 10px;
+  margin-right: 65px;
+  margin-top: -12px;
+}
+/* line 724, ../sass/screen.scss */
+.frame a .rating p {
+  text-transform: lowercase;
+  color: grey;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-left: 70px;
+  margin-top: -20px;
+}
+/* line 733, ../sass/screen.scss */
+.frame a:hover, .frame a:focus {
+  background: white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+}
+/* line 736, ../sass/screen.scss */
+.frame a:hover .card-title, .frame a:focus .card-title {
+  background: rgba(239, 155, 72, 0.4);
+}
+/* line 739, ../sass/screen.scss */
+.frame a:hover .card-meta, .frame a:focus .card-meta {
+  max-height: 2em;
+}
+
+/* line 745, ../sass/screen.scss */
 .swiper-button-next, .swiper-button-prev {
   z-index: 999;
 }

@@ -538,7 +538,7 @@ $font-size: 20px; // <-- Adjust this only!
 $star-width: 1em;
 
 .disc-rating {
-  width: 90px;
+  width: 140px;
   height: 25px;
   bottom: 0px;
   float: right;
@@ -658,8 +658,40 @@ $star-width: 1em;
   cursor: pointer;
 }
 
-.frame ul li card a {
-  margin-top: -30px;
+.circle {
+  width: 5px;
+  height: 5px;
+  background-color: limegreen;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.status {
+  color:grey;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.frame a {
+  .card-title {
+    background: rgba(253, 234, 215, 0.9);
+  }
+  
+  .card-status-div {
+    width: 100px;
+    height: 15px;
+    display: inline;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  
+  .card-status-div .status {
+    margin-left: 8px;
+    margin-top: -8px;
+  }
+  
   .card-meta {
 		max-height: 0;
 		overflow: hidden;
@@ -674,11 +706,35 @@ $star-width: 1em;
 		@include transition-timing-function(ease-in-out);
 	}
   
+  .card-title span {
+    color:brown;
+    margin-top: -28px;
+  }
+  
+  .card-title h5 {
+    margin-bottom: 5px;
+  }
+  
+  .disc-rating {
+    font-size: 10px;
+    margin-right: 65px;
+    margin-top: -12px;
+  }
+  
+  .rating p {
+    text-transform: lowercase;
+    color: grey;
+    font-size: 10px;
+    font-family: sans-serif;
+    margin-left: 70px;
+    margin-top: -20px;
+  }
+  
 	&:hover, &:focus {
 		background: white;
 	  @include box-shadow(rgba(black, 0.45) 0px 0px 20px 0px);
 		.card-title {
-			background: rgb(239, 155, 72, 0.4);
+			background: rgba(239, 155, 72, 0.4);
 		}
 		.card-meta {
 			max-height: 2em;
@@ -686,6 +742,6 @@ $star-width: 1em;
 	}
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev {
   z-index: 999;
 }
