@@ -1,0 +1,3 @@
+- Install NodeJs
+- Open command line and run "nmp install" to install all required packages
+- While developing, run "grunt watch" to watch any change to compile SASS
