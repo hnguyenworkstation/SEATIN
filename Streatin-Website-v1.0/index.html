@@ -9,7 +9,7 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
+		<link href="stylesheets/main.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +48,34 @@
 		<div id="content">
 		  <div class="search_area">
         <!-- Area for search box and some other stuffs -->
+        <div class="welcome_block">
+          <h2>The Hub that for Foods and by Foods</h2>
+        </div>
+        
+        <div class="search_wrapper">
+          <div class="search places">
+            <p>Where to eat?</p>
+            <input type="text" id="search_place" 
+                   class="search-field" placeholder="Search for places..." />
+            <ul id="splace_result" class="term-list hidden"></ul>
+          </div>
+          
+          <div class="search time">
+            <p>When to eat?</p>
+            <input type="text" id="search_time" 
+                   class="search-field" placeholder="time.." />
+          </div>
+          
+          <div class="search foodtype">
+            <p>What to eat?</p>
+            <input type="text" id="search_kindoffood" 
+                   class="search-field" placeholder="or kind of food.." />
+          </div>
+          
+          <div class="search button">
+            <a href="#" class="action-button shadow animate red">Search</a>
+          </div>
+        </div>
       </div>
 		</div>
     

@@ -7,7 +7,8 @@
 
 # Node folder
 node_modules/
-sstylesheets/
+stylesheets/
+.sass-cache/
 
 # Java class files
 *.class

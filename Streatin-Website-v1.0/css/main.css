@@ -1,7 +1,60 @@
-.navbar{padding:15px 0}
-.navbar__menu{list-style:none;margin:0;padding:0;text-align:center}
-.navbar__menu li{display:inline-block}
-.navbar__menu li a{font-size:16px;font-weight:700;color:#000;display:table-cell;vertical-align:bottom}
-.navbar__menu li a:hover{color:#000;text-decoration:none}
-.navbar__menu li+li{margin-left:40px}
-.search_area{position:absolute;width:100%;height:200px;color:orange}
+/*
+ * Include header, footer and any common CSS rule
+ */
+/* line 6, ../sass/common.scss */
+.navbar {
+  padding: 15px 0;
+}
+/* line 9, ../sass/common.scss */
+.navbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 15, ../sass/common.scss */
+.navbar__menu li {
+  display: inline-block;
+}
+/* line 18, ../sass/common.scss */
+.navbar__menu li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  display: table-cell;
+  vertical-align: bottom;
+}
+/* line 25, ../sass/common.scss */
+.navbar__menu li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 31, ../sass/common.scss */
+.navbar__menu li + li {
+  margin-left: 40px;
+}
+
+/* line 38, ../sass/common.scss */
+#footer {
+  width: 100%;
+  height: 500px;
+  background-color: grey;
+  background-size: 100% 100%;
+}
+
+/* line 3, ../sass/search_area.scss */
+.search_area {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: orange;
+}
+
+/* line 10, ../sass/search_area.scss */
+.search_wrapper {
+  width: 900px;
+  height: 200px;
+  left: 20%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
