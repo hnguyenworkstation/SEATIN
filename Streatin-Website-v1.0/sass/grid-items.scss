@@ -1,0 +1,52 @@
+.grid-items {
+	margin-top: 20px;
+	
+	.item {
+		&__logo {
+			
+		}
+		
+		&__metadata {
+			padding: 10px 30px;
+			
+			.left-col {
+				margin-right: 15px;
+				width: 25%;
+				
+				.avatar img {
+					width: 100%;
+					border-radius: 50%;
+				}
+				
+				.ratings {
+					margin-top: 10px;
+					text-align: center;
+					font-size: 12px;
+					p {
+						margin: 0;
+						padding: 0;
+					}
+					.stars {
+						color: #ff8301;
+					}
+					.number-reviews {
+						font-weight: 700;
+					}
+				}
+			}
+			.right-col {
+				width: 70%;
+				font-size: 13px;
+				
+				p {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	
+	.row + .row {
+		margin-top: 20px;
+	}
+}

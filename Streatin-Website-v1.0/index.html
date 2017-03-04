@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Streatin</title>
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
@@ -28,72 +22,82 @@
         Typekit.load();
       } catch (e) {}
     </script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Streatin</title>
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	</head>
-	<body>
-		<header id="header">
-			<div class="container">
-				<nav class="navbar" role="navigation">
-					<ul class="navbar__menu">
-						<li>
-							<a href="#">Help</a>
-						</li>
-						<li>
-							<a href="#">Become a host</a>
-						</li>
-						<li>
-							<a href="#" class="logo">
-								<img src="images/logo.png" alt="Streatin">
-							</a>
-						</li>
-						<li>
-							<a href="#">Sign up</a>
-						</li>
-						<li>
-							<a href="#">Login</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-    
-		<div id="content">
-		  <div class="search_area">
-        <!-- Area for search box and some other stuffs -->
-        <div class="welcome_block">
-          <h2>The Hub that for Foods and by Foods</h2>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <ul class="navbar__menu">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Become a host</a>
+                    </li>
+                    <li>
+                        <a href="#" class="logo">
+                            <img src="images/logo.png" alt="Streatin">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Sign up</a>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        
-        <div class="search_wrapper">
-          <div class="search places">
-            <p>Where to eat?</p>
-            <input type="text" id="search_place" 
-                   class="search-field" placeholder="Search for places..." />
-            <ul id="splace_result" class="term-list hidden"></ul>
-          </div>
-          
-          <div class="search time">
-            <p>When to eat?</p>
-            <input type="text" id="search_time" 
-                   class="search-field" placeholder="time.." />
-          </div>
-          
-          <div class="search foodtype">
-            <p>What to eat?</p>
-            <input type="text" id="search_kindoffood" 
-                   class="search-field" placeholder="or kind of food.." />
-          </div>
-          
-          <div class="search button">
-            <a href="#" class="action-button shadow animate red">Search</a>
-          </div>
+    </header>
+
+    <div id="content">
+        <div class="search_area">
+            <!-- Area for search box and some other stuffs -->
+            <div class="welcome_block">
+                <h2>The Hub that for Foods and buy Foods</h2>
+            </div>
+
+            <div class="search_wrapper">
+                <div class="search places">
+                    <p>Where to eat?</p>
+                    <input type="text" id="search_place" class="search-field" placeholder="Search for places..." />
+                    <ul id="splace_result" class="term-list hidden"></ul>
+                </div>
+
+                <div class="search time">
+                    <p>When to eat?</p>
+                    <input type="text" id="search_time" class="search-field" placeholder="time.." />
+                </div>
+
+                <div class="search foodtype">
+                    <p>What to eat?</p>
+                    <input type="text" id="search_kindoffood" class="search-field" placeholder="or kind of food.." />
+                </div>
+
+                <div class="search button">
+                    <a href="#" class="action-button shadow animate red">Search</a>
+                </div>
+            </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
     
@@ -367,4 +371,216 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.js"></script>
 	</body>
+=======
+		<div class="grid-items container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="item">
+						<div class="item__image">
+							<img src="images/food.jpg" class="img-responsive" />
+						</div>
+						<div class="item__metadata clearfix">
+							<div class="pull-left left-col">
+								<div class="avatar">
+									<img src="images/avatar.jpg" />
+								</div>
+								<div class="ratings">
+									<p class="stars">
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star"></i>
+										<i class="glyphicon glyphicon-star-empty"></i>
+									</p>
+									<p class="number-reviews">4 reviews</p>
+								</div>
+							</div>
+							<div class="pull-left right-col">
+								<p class="text-bold">$4.5</p>
+								<p class="text-bold">Crunchy, delicous fried eggrol</p>
+								<p>appetizer + fast food</p>
+								<p>14 serving left</p>
+								<p>indoor streating: 6:00 P.M. - 9:00 P.M.</p>
+								<p>pickup: 6:00 P.M. - 10:00 P.M.</p>
+								<p>casual, romantic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <footer id="footer">
+        
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+</body>
+
+>>>>>>> ee381dab3d57b1dc12dd89ba31d4af0bfff23953
 </html>
