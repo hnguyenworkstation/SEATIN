@@ -644,9 +644,18 @@ img {
   position: relative;
   background-color: aqua;
   margin-top: -20px;
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin: 3px;
+  margin-right: -25px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #333;
 }
 
-/* line 498, ../sass/horizontal_list.scss */
+/* line 509, ../sass/horizontal_list.scss */
 .card-chef-name {
   margin: 0;
   height: 80px;
@@ -657,7 +666,7 @@ img {
   position: relative;
 }
 
-/* line 508, ../sass/horizontal_list.scss */
+/* line 519, ../sass/horizontal_list.scss */
 .card-chef-name h5,
 .card-chef-name span {
   left: 25%;
@@ -667,7 +676,7 @@ img {
   margin-top: -20px;
 }
 
-/* line 517, ../sass/horizontal_list.scss */
+/* line 528, ../sass/horizontal_list.scss */
 .card-chef-name h5 {
   text-transform: uppercase;
   bottom: 70%;
@@ -676,14 +685,14 @@ img {
   color: #000000;
 }
 
-/* line 527, ../sass/horizontal_list.scss */
+/* line 538, ../sass/horizontal_list.scss */
 .card-chef-name span {
   font-size: 0.8em;
   color: #ffffff;
   top: 50%;
 }
 
-/* line 533, ../sass/horizontal_list.scss */
+/* line 544, ../sass/horizontal_list.scss */
 .card-chef-name img {
   max-width: 100%;
   height: 60px;
@@ -698,7 +707,7 @@ img {
   margin-top: -6px;
 }
 
-/* line 551, ../sass/horizontal_list.scss */
+/* line 562, ../sass/horizontal_list.scss */
 .disc-rating {
   width: 140px;
   height: 25px;
@@ -708,12 +717,12 @@ img {
   margin-right: -20px;
 }
 
-/* line 560, ../sass/horizontal_list.scss */
+/* line 571, ../sass/horizontal_list.scss */
 .rating {
   margin: 10px 0;
 }
 
-/* line 564, ../sass/horizontal_list.scss */
+/* line 575, ../sass/horizontal_list.scss */
 .rating i {
   display: inline-block;
   width: 0;
@@ -731,87 +740,87 @@ img {
 }
 
 /** Colors */
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='1'] .star-1 {
   border-color: #cc8b1f;
   background: #cc8b1f;
 }
 
-/* line 595, ../sass/horizontal_list.scss */
+/* line 606, ../sass/horizontal_list.scss */
 [data-rating^='1.5'] .star-2 {
   border-left-color: #cc8b1f;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='2'] .star-1 {
   border-color: #dcb228;
   background: #dcb228;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='2'] .star-2 {
   border-color: #dcb228;
   background: #dcb228;
 }
 
-/* line 595, ../sass/horizontal_list.scss */
+/* line 606, ../sass/horizontal_list.scss */
 [data-rating^='2.5'] .star-3 {
   border-left-color: #dcb228;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-1 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-2 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-3 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 595, ../sass/horizontal_list.scss */
+/* line 606, ../sass/horizontal_list.scss */
 [data-rating^='3.5'] .star-4 {
   border-left-color: #f0991e;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-1 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-2 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-3 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 589, ../sass/horizontal_list.scss */
+/* line 600, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-4 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 595, ../sass/horizontal_list.scss */
+/* line 606, ../sass/horizontal_list.scss */
 [data-rating^='4.5'] .star-5 {
   border-left-color: #f26a2c;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 611, ../sass/horizontal_list.scss */
 [data-rating="5"] i {
   background: #dd050b;
   border-color: #dd050b;
@@ -819,16 +828,16 @@ img {
 
 /** Print */
 @media print {
-  /* line 608, ../sass/horizontal_list.scss */
+  /* line 619, ../sass/horizontal_list.scss */
   .rating {
     -webkit-print-color-adjust: exact;
   }
-  /* line 610, ../sass/horizontal_list.scss */
+  /* line 621, ../sass/horizontal_list.scss */
   .rating i {
     text-shadow: none;
   }
 }
-/* line 616, ../sass/horizontal_list.scss */
+/* line 627, ../sass/horizontal_list.scss */
 .horizontal-slide-div {
   position: relative;
   margin: 3em 0;
@@ -837,7 +846,7 @@ img {
   margin-left: 10%;
 }
 
-/* line 624, ../sass/horizontal_list.scss */
+/* line 635, ../sass/horizontal_list.scss */
 .horizontal-scrollbar {
   margin: 0 0 1em 0;
   height: 2px;
@@ -845,7 +854,7 @@ img {
   line-height: 0;
 }
 
-/* line 631, ../sass/horizontal_list.scss */
+/* line 642, ../sass/horizontal_list.scss */
 .horizontal-scrollbar .hscroll-handle {
   width: 100px;
   height: 100%;
@@ -853,7 +862,7 @@ img {
   cursor: pointer;
 }
 
-/* line 638, ../sass/horizontal_list.scss */
+/* line 649, ../sass/horizontal_list.scss */
 .horizontal-scrollbar .hscroll-handle .hscroll-mousearea {
   position: absolute;
   top: -9px;
@@ -862,14 +871,14 @@ img {
   height: 20px;
 }
 
-/* line 646, ../sass/horizontal_list.scss */
+/* line 657, ../sass/horizontal_list.scss */
 .frame {
   height: 400px;
   line-height: 300px;
   overflow: hidden;
 }
 
-/* line 652, ../sass/horizontal_list.scss */
+/* line 663, ../sass/horizontal_list.scss */
 .frame ul {
   list-style: none;
   margin: 0;
@@ -878,7 +887,7 @@ img {
   font-size: 14px;
 }
 
-/* line 660, ../sass/horizontal_list.scss */
+/* line 671, ../sass/horizontal_list.scss */
 .frame ul li {
   float: left;
   width: 327px;
@@ -891,7 +900,7 @@ img {
   cursor: pointer;
 }
 
-/* line 672, ../sass/horizontal_list.scss */
+/* line 683, ../sass/horizontal_list.scss */
 .circle {
   width: 5px;
   height: 5px;
@@ -900,18 +909,18 @@ img {
   margin-top: 2px;
 }
 
-/* line 680, ../sass/horizontal_list.scss */
+/* line 691, ../sass/horizontal_list.scss */
 .status {
   color: grey;
   font-size: 10px;
   text-transform: capitalize;
 }
 
-/* line 687, ../sass/horizontal_list.scss */
+/* line 698, ../sass/horizontal_list.scss */
 .frame a .card-title {
   background: rgba(253, 234, 215, 0.9);
 }
-/* line 691, ../sass/horizontal_list.scss */
+/* line 702, ../sass/horizontal_list.scss */
 .frame a .card-status-div {
   width: 100px;
   height: 15px;
@@ -921,12 +930,12 @@ img {
   margin-right: -20px;
   font-size: 12px;
 }
-/* line 701, ../sass/horizontal_list.scss */
+/* line 712, ../sass/horizontal_list.scss */
 .frame a .card-status-div .status {
   margin-left: 8px;
   margin-top: -8px;
 }
-/* line 706, ../sass/horizontal_list.scss */
+/* line 717, ../sass/horizontal_list.scss */
 .frame a .card-meta {
   max-height: 0;
   overflow: hidden;
@@ -949,22 +958,22 @@ img {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 720, ../sass/horizontal_list.scss */
+/* line 731, ../sass/horizontal_list.scss */
 .frame a .card-title span {
   color: brown;
   margin-top: -28px;
 }
-/* line 725, ../sass/horizontal_list.scss */
+/* line 736, ../sass/horizontal_list.scss */
 .frame a .card-title h5 {
   margin-bottom: 5px;
 }
-/* line 729, ../sass/horizontal_list.scss */
+/* line 740, ../sass/horizontal_list.scss */
 .frame a .disc-rating {
   font-size: 10px;
   margin-right: 65px;
   margin-top: -12px;
 }
-/* line 735, ../sass/horizontal_list.scss */
+/* line 746, ../sass/horizontal_list.scss */
 .frame a .rating p {
   text-transform: lowercase;
   color: grey;
@@ -973,24 +982,145 @@ img {
   margin-left: 70px;
   margin-top: -20px;
 }
-/* line 744, ../sass/horizontal_list.scss */
+/* line 755, ../sass/horizontal_list.scss */
 .frame a:hover, .frame a:focus {
   background: white;
   -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
 }
-/* line 747, ../sass/horizontal_list.scss */
+/* line 758, ../sass/horizontal_list.scss */
 .frame a:hover .card-title, .frame a:focus .card-title {
   background: rgba(239, 155, 72, 0.4);
 }
-/* line 750, ../sass/horizontal_list.scss */
+/* line 761, ../sass/horizontal_list.scss */
 .frame a:hover .card-meta, .frame a:focus .card-meta {
   max-height: 2em;
 }
 
-/* line 756, ../sass/horizontal_list.scss */
+/* line 767, ../sass/horizontal_list.scss */
 .swiper-button-next, .swiper-button-prev {
   z-index: 999;
   margin-right: 3%;
+}
+
+/* line 772, ../sass/horizontal_list.scss */
+#tags {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #CCC inset;
+  padding: 10px;
+  width: 50%;
+  background: #fafafa;
+  margin: auto;
+}
+
+/* line 783, ../sass/horizontal_list.scss */
+.tag {
+  display: inline-block;
+  background: #F95;
+  color: #FFF;
+  padding: 5px 10px;
+  margin: 2px 2px 2px 20px;
+  font: normal 16px sans-serif;
+  position: relative;
+  cursor: default;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 0% 50%;
+  -webkit-animation: swing 1s;
+  -o-animation: swing 1s;
+  animation: swing 1s;
+}
+
+/* line 799, ../sass/horizontal_list.scss */
+.tag:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 10px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+
+/* line 814, ../sass/horizontal_list.scss */
+.tag:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFF;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  box-shadow: inset 1px 1px 0 #CCC;
+}
+
+/* line 828, ../sass/horizontal_list.scss */
+.tag .close {
+  position: absolute;
+  background: inherit;
+  left: -4px;
+  z-index: 3;
+  visibility: hidden;
+}
+
+/* line 836, ../sass/horizontal_list.scss */
+.tag:hover .close {
+  visibility: visible;
+}
+
+/* line 840, ../sass/horizontal_list.scss */
+.close:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 844, ../sass/horizontal_list.scss */
+.colors {
+  list-style: none;
+}
+
+/* line 848, ../sass/horizontal_list.scss */
+.colors li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(100deg);
+  }
+  25% {
+    -webkit-transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(-200);
+  }
+  25% {
+    -webkit-transform: rotate(-70);
+  }
+  50% {
+    -webkit-transform: rotate(-185);
+  }
+  100% {
+    -webkit-transform: rotate(-180);
+  }
 }
