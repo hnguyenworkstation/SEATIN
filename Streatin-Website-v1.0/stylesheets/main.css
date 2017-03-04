@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Include header, footer and any common CSS rule
  */
@@ -821,35 +822,23 @@ body {
 .card:hover .card-meta, .card:focus .card-meta {
   max-height: 2em;
 }
+/* line 481, ../sass/horizontal_list.scss */
+.card .card-actions {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 0 35px;
+  background-color: aqua;
+  margin-top: -20px;
+}
 
-/* line 482, ../sass/horizontal_list.scss */
+/* line 493, ../sass/horizontal_list.scss */
 img {
   max-width: 100%;
 }
 
-/* line 486, ../sass/horizontal_list.scss */
-.card-actions {
-  margin: 0;
-  height: 100px;
-  display: block;
-  text-align: left;
-  color: #ffffff;
-  padding: 0 35px;
-  position: relative;
-  background-color: aqua;
-  margin-top: -20px;
-  outline: none;
-  border: none;
-  padding: 6px;
-  margin: 3px;
-  margin-right: -25px;
-  width: 100px;
-  background-color: transparent;
-  font-size: 14px;
-  color: #333;
-}
-
-/* line 509, ../sass/horizontal_list.scss */
+/* line 497, ../sass/horizontal_list.scss */
 .card-chef-name {
   margin: 0;
   height: 80px;
@@ -860,7 +849,7 @@ img {
   position: relative;
 }
 
-/* line 519, ../sass/horizontal_list.scss */
+/* line 507, ../sass/horizontal_list.scss */
 .card-chef-name h5,
 .card-chef-name span {
   left: 25%;
@@ -870,7 +859,7 @@ img {
   margin-top: -20px;
 }
 
-/* line 528, ../sass/horizontal_list.scss */
+/* line 516, ../sass/horizontal_list.scss */
 .card-chef-name h5 {
   text-transform: uppercase;
   bottom: 70%;
@@ -879,14 +868,14 @@ img {
   color: #000000;
 }
 
-/* line 538, ../sass/horizontal_list.scss */
+/* line 524, ../sass/horizontal_list.scss */
 .card-chef-name span {
   font-size: 0.8em;
   color: #ffffff;
   top: 50%;
 }
 
-/* line 544, ../sass/horizontal_list.scss */
+/* line 530, ../sass/horizontal_list.scss */
 .card-chef-name img {
   max-width: 100%;
   height: 60px;
@@ -901,7 +890,7 @@ img {
   margin-top: -6px;
 }
 
-/* line 562, ../sass/horizontal_list.scss */
+/* line 548, ../sass/horizontal_list.scss */
 .disc-rating {
   width: 140px;
   height: 25px;
@@ -911,12 +900,12 @@ img {
   margin-right: -20px;
 }
 
-/* line 571, ../sass/horizontal_list.scss */
+/* line 557, ../sass/horizontal_list.scss */
 .rating {
   margin: 10px 0;
 }
 
-/* line 575, ../sass/horizontal_list.scss */
+/* line 561, ../sass/horizontal_list.scss */
 .rating i {
   display: inline-block;
   width: 0;
@@ -934,87 +923,87 @@ img {
 }
 
 /** Colors */
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='1'] .star-1 {
   border-color: #cc8b1f;
   background: #cc8b1f;
 }
 
-/* line 606, ../sass/horizontal_list.scss */
+/* line 592, ../sass/horizontal_list.scss */
 [data-rating^='1.5'] .star-2 {
   border-left-color: #cc8b1f;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='2'] .star-1 {
   border-color: #dcb228;
   background: #dcb228;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='2'] .star-2 {
   border-color: #dcb228;
   background: #dcb228;
 }
 
-/* line 606, ../sass/horizontal_list.scss */
+/* line 592, ../sass/horizontal_list.scss */
 [data-rating^='2.5'] .star-3 {
   border-left-color: #dcb228;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-1 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-2 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='3'] .star-3 {
   border-color: #f0991e;
   background: #f0991e;
 }
 
-/* line 606, ../sass/horizontal_list.scss */
+/* line 592, ../sass/horizontal_list.scss */
 [data-rating^='3.5'] .star-4 {
   border-left-color: #f0991e;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-1 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-2 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-3 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 600, ../sass/horizontal_list.scss */
+/* line 586, ../sass/horizontal_list.scss */
 [data-rating^='4'] .star-4 {
   border-color: #f26a2c;
   background: #f26a2c;
 }
 
-/* line 606, ../sass/horizontal_list.scss */
+/* line 592, ../sass/horizontal_list.scss */
 [data-rating^='4.5'] .star-5 {
   border-left-color: #f26a2c;
 }
 
-/* line 611, ../sass/horizontal_list.scss */
+/* line 597, ../sass/horizontal_list.scss */
 [data-rating="5"] i {
   background: #dd050b;
   border-color: #dd050b;
@@ -1022,16 +1011,16 @@ img {
 
 /** Print */
 @media print {
-  /* line 619, ../sass/horizontal_list.scss */
+  /* line 605, ../sass/horizontal_list.scss */
   .rating {
     -webkit-print-color-adjust: exact;
   }
-  /* line 621, ../sass/horizontal_list.scss */
+  /* line 607, ../sass/horizontal_list.scss */
   .rating i {
     text-shadow: none;
   }
 }
-/* line 627, ../sass/horizontal_list.scss */
+/* line 613, ../sass/horizontal_list.scss */
 .horizontal-slide-div {
   position: relative;
   margin: 3em 0;
@@ -1040,7 +1029,7 @@ img {
   margin-left: 10%;
 }
 
-/* line 635, ../sass/horizontal_list.scss */
+/* line 621, ../sass/horizontal_list.scss */
 .horizontal-scrollbar {
   margin: 0 0 1em 0;
   height: 2px;
@@ -1048,7 +1037,7 @@ img {
   line-height: 0;
 }
 
-/* line 642, ../sass/horizontal_list.scss */
+/* line 628, ../sass/horizontal_list.scss */
 .horizontal-scrollbar .hscroll-handle {
   width: 100px;
   height: 100%;
@@ -1056,7 +1045,7 @@ img {
   cursor: pointer;
 }
 
-/* line 649, ../sass/horizontal_list.scss */
+/* line 635, ../sass/horizontal_list.scss */
 .horizontal-scrollbar .hscroll-handle .hscroll-mousearea {
   position: absolute;
   top: -9px;
@@ -1065,14 +1054,14 @@ img {
   height: 20px;
 }
 
-/* line 657, ../sass/horizontal_list.scss */
+/* line 643, ../sass/horizontal_list.scss */
 .frame {
   height: 400px;
   line-height: 300px;
   overflow: hidden;
 }
 
-/* line 663, ../sass/horizontal_list.scss */
+/* line 649, ../sass/horizontal_list.scss */
 .frame ul {
   list-style: none;
   margin: 0;
@@ -1081,7 +1070,7 @@ img {
   font-size: 14px;
 }
 
-/* line 671, ../sass/horizontal_list.scss */
+/* line 657, ../sass/horizontal_list.scss */
 .frame ul li {
   float: left;
   width: 327px;
@@ -1094,7 +1083,7 @@ img {
   cursor: pointer;
 }
 
-/* line 683, ../sass/horizontal_list.scss */
+/* line 669, ../sass/horizontal_list.scss */
 .circle {
   width: 5px;
   height: 5px;
@@ -1103,18 +1092,18 @@ img {
   margin-top: 2px;
 }
 
-/* line 691, ../sass/horizontal_list.scss */
+/* line 677, ../sass/horizontal_list.scss */
 .status {
   color: grey;
   font-size: 10px;
   text-transform: capitalize;
 }
 
-/* line 698, ../sass/horizontal_list.scss */
+/* line 684, ../sass/horizontal_list.scss */
 .frame a .card-title {
   background: rgba(253, 234, 215, 0.9);
 }
-/* line 702, ../sass/horizontal_list.scss */
+/* line 688, ../sass/horizontal_list.scss */
 .frame a .card-status-div {
   width: 100px;
   height: 15px;
@@ -1124,12 +1113,12 @@ img {
   margin-right: -20px;
   font-size: 12px;
 }
-/* line 712, ../sass/horizontal_list.scss */
+/* line 698, ../sass/horizontal_list.scss */
 .frame a .card-status-div .status {
   margin-left: 8px;
   margin-top: -8px;
 }
-/* line 717, ../sass/horizontal_list.scss */
+/* line 703, ../sass/horizontal_list.scss */
 .frame a .card-meta {
   max-height: 0;
   overflow: hidden;
@@ -1152,22 +1141,22 @@ img {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 731, ../sass/horizontal_list.scss */
+/* line 717, ../sass/horizontal_list.scss */
 .frame a .card-title span {
   color: brown;
   margin-top: -28px;
 }
-/* line 736, ../sass/horizontal_list.scss */
+/* line 722, ../sass/horizontal_list.scss */
 .frame a .card-title h5 {
   margin-bottom: 5px;
 }
-/* line 740, ../sass/horizontal_list.scss */
+/* line 726, ../sass/horizontal_list.scss */
 .frame a .disc-rating {
   font-size: 10px;
   margin-right: 65px;
   margin-top: -12px;
 }
-/* line 746, ../sass/horizontal_list.scss */
+/* line 732, ../sass/horizontal_list.scss */
 .frame a .rating p {
   text-transform: lowercase;
   color: grey;
@@ -1176,148 +1165,162 @@ img {
   margin-left: 70px;
   margin-top: -20px;
 }
-/* line 755, ../sass/horizontal_list.scss */
+/* line 741, ../sass/horizontal_list.scss */
 .frame a:hover, .frame a:focus {
   background: white;
   -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
 }
-/* line 758, ../sass/horizontal_list.scss */
+/* line 744, ../sass/horizontal_list.scss */
 .frame a:hover .card-title, .frame a:focus .card-title {
   background: rgba(239, 155, 72, 0.4);
 }
-/* line 761, ../sass/horizontal_list.scss */
+/* line 747, ../sass/horizontal_list.scss */
 .frame a:hover .card-meta, .frame a:focus .card-meta {
   max-height: 2em;
 }
 
-/* line 767, ../sass/horizontal_list.scss */
+/* line 753, ../sass/horizontal_list.scss */
 .swiper-button-next, .swiper-button-prev {
   z-index: 999;
   margin-right: 3%;
 }
 
-/* line 772, ../sass/horizontal_list.scss */
-#tags {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px #CCC inset;
-  padding: 10px;
-  width: 50%;
-  background: #fafafa;
-  margin: auto;
-}
-
-/* line 783, ../sass/horizontal_list.scss */
-.tag {
-  display: inline-block;
-  background: #F95;
-  color: #FFF;
-  padding: 5px 10px;
-  margin: 2px 2px 2px 20px;
-  font: normal 16px sans-serif;
-  position: relative;
-  cursor: default;
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transform-origin: 0% 50%;
-  -webkit-animation: swing 1s;
-  -o-animation: swing 1s;
-  animation: swing 1s;
-}
-
-/* line 799, ../sass/horizontal_list.scss */
-.tag:before {
-  content: "";
+/* line 758, ../sass/horizontal_list.scss */
+.tag-div {
+  width: 300px;
+  height: 300px;
+  margin-top: -28%;
   position: absolute;
-  width: 0;
-  background: inherit;
-  height: 10px;
-  border: 10px solid #fafafa;
-  border-right-color: transparent;
-  -webkit-border-radius: 10px 0 0 10px;
-  -moz-border-radius: 10px 0 0 10px;
-  border-radius: 10px 0 0 10px;
-  left: -20px;
+  margin-left: -13%;
+  float: left;
+}
+
+/* line 767, ../sass/horizontal_list.scss */
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+}
+
+/* line 775, ../sass/horizontal_list.scss */
+.tag {
+  background: rgba(239, 155, 72, 0.4);
+  border-radius: 3px 0 0 3px;
+  color: black;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: absolute;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+/* line 789, ../sass/horizontal_list.scss */
+.tag::before {
+  background: rgba(239, 155, 72, 0.4);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+/* line 801, ../sass/horizontal_list.scss */
+.tag::after {
+  background: rgba(239, 155, 72, 0.4);
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid rgba(239, 155, 72, 0.4);
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
   top: 0;
 }
 
-/* line 814, ../sass/horizontal_list.scss */
-.tag:after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #FFF;
-  position: absolute;
-  left: -3px;
-  top: 12px;
-  box-shadow: inset 1px 1px 0 #CCC;
+/* line 812, ../sass/horizontal_list.scss */
+.tag:hover {
+  background-color: rgba(220, 20, 60, 0.5);
+  color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 828, ../sass/horizontal_list.scss */
-.tag .close {
-  position: absolute;
-  background: inherit;
-  left: -4px;
-  z-index: 3;
-  visibility: hidden;
+/* line 817, ../sass/horizontal_list.scss */
+.tag:hover::after {
+  border-left-color: crimson;
 }
 
-/* line 836, ../sass/horizontal_list.scss */
-.tag:hover .close {
-  visibility: visible;
+/* line 821, ../sass/horizontal_list.scss */
+.button-two {
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 0 0 100px;
 }
 
-/* line 840, ../sass/horizontal_list.scss */
-.close:hover {
-  color: rgba(0, 0, 0, 0.5);
+/*Button Two*/
+/* line 829, ../sass/horizontal_list.scss */
+.button-two {
+  border-radius: 4px;
+  background-color: #d35400;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
 }
 
-/* line 844, ../sass/horizontal_list.scss */
-.colors {
-  list-style: none;
-}
-
-/* line 848, ../sass/horizontal_list.scss */
-.colors li {
+/* line 839, ../sass/horizontal_list.scss */
+.button-two span {
+  cursor: pointer;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  position: relative;
+  transition: 0.5s;
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotate(100deg);
-  }
-  25% {
-    -webkit-transform: rotate(-25deg);
-  }
-  50% {
-    -webkit-transform: rotate(15deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-  }
+/* line 846, ../sass/horizontal_list.scss */
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
-@keyframes swing {
-  0% {
-    -webkit-transform: rotate(-200);
-  }
-  25% {
-    -webkit-transform: rotate(-70);
-  }
-  50% {
-    -webkit-transform: rotate(-185);
-  }
-  100% {
-    -webkit-transform: rotate(-180);
-  }
+
+/* line 855, ../sass/horizontal_list.scss */
+.card-buttons {
+  width: 300px;
+  height: 300px;
+  margin-top: -21%;
+  position: absolute;
+  margin-left: -3%;
+  float: left;
 }
+
+/* line 864, ../sass/horizontal_list.scss */
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+/* line 868, ../sass/horizontal_list.scss */
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* line 873, ../sass/horizontal_list.scss */
+#card-2, #card-3 {
+  margin-left: 350px;
+  margin-top: -400px;
+}
+
 /* line 1, ../sass/grid-items.scss */
 .grid-items {
   margin-top: 20px;
@@ -1368,4 +1371,37 @@ img {
 /* line 49, ../sass/grid-items.scss */
 .grid-items .row + .row {
   margin-top: 20px;
+}
+
+/* line 4, ../sass/food1.scss */
+.food-block, .user-block {
+  background-color: aquamarine;
+  display: inline-block;
+  margin-left: 2%;
+}
+
+/* line 10, ../sass/food1.scss */
+.food-block {
+  width: 40%;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 20%;
+}
+/* line 16, ../sass/food1.scss */
+.food-block img {
+  max-width: 100%;
+  height: 300px;
+  width: 510px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  margin-left: 2.1%;
+}
+
+/* line 28, ../sass/food1.scss */
+.user-block {
+  width: 50%;
+  height: 500px;
 }

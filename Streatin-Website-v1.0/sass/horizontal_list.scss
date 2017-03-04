@@ -477,22 +477,21 @@ body {
 			max-height: 2em;
 		}
 	}
+	
+	.card-actions {
+		margin: 0;
+		position: relative;
+		width: 100%;
+		height: 200px;
+		padding: 0 35px;
+		background-color: aqua;
+		margin-top: -20px;
+	}
+
 }
 
 img {
 	max-width: 100%;
-}
-
-.card-actions {
-	margin: 0;
-  height: 100px;
-  display: block;
-  text-align: left;
-  color: #ffffff;
-  padding: 0 35px;
-  position: relative;
-	background-color: aqua;
-	margin-top: -20px;
 }
 
 .card-chef-name {
@@ -755,3 +754,124 @@ $star-width: 1em;
   z-index: 999;
   margin-right: 3%;
 }
+
+.tag-div {
+	width: 300px;
+	height: 300px;
+	margin-top: -28%;
+	position: absolute;
+	margin-left: -13%;
+	float: left;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+	display: inline-block;
+}
+
+.tag {
+  background: rgba(239, 155, 72, 0.4);
+  border-radius: 3px 0 0 3px;
+  color: black;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: absolute;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: rgba(239, 155, 72, 0.4);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: rgba(239, 155, 72, 0.4);
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid rgba(239, 155, 72, 0.4);;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: rgba(crimson, 0.5);
+  color: rgba(black, 0.4);
+}
+
+.tag:hover::after {
+   border-left-color: crimson; 
+}
+
+.button-two {
+	text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0 0 0 100px;
+}
+
+/*Button Two*/
+.button-two {
+  border-radius: 4px;
+  background-color:#d35400;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.card-buttons {
+	width: 300px;
+	height: 300px;
+	margin-top: -21%;
+	position: absolute;
+	margin-left: -3%;
+	float: left;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#card-2, #card-3 {
+	margin-left: 350px;
+	margin-top:-400px;
+}
+
