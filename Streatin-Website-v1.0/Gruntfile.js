@@ -9,6 +9,14 @@ module.exports = function(grunt) {
 		// this way we can use things like name and version (pkg.name)
 		pkg: grunt.file.readJSON('package.json'),
 		
+    compass: {
+      options: {
+        bundleExec: true,
+        require: ['compass/import-once/activate'],
+        require: ['breakpoint']
+      }
+    },
+    
 		watch: {
 		    options: {
 		        event: ['changed', 'added', 'deleted']
