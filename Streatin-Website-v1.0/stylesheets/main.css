@@ -1,0 +1,1159 @@
+/*
+ * Include header, footer and any common CSS rule
+ */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+/* line 6, ../sass/common.scss */
+.navbar {
+  padding: 15px 0;
+}
+/* line 9, ../sass/common.scss */
+.navbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 15, ../sass/common.scss */
+.navbar__menu li {
+  display: inline-block;
+}
+/* line 18, ../sass/common.scss */
+.navbar__menu li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  display: table-cell;
+  vertical-align: bottom;
+}
+/* line 25, ../sass/common.scss */
+.navbar__menu li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 31, ../sass/common.scss */
+.navbar__menu li + li {
+  margin-left: 40px;
+}
+
+/* line 38, ../sass/common.scss */
+#footer {
+  width: 100%;
+  height: 500px;
+  background-color: grey;
+  background-size: 100% 100%;
+}
+
+/* line 3, ../sass/search_area.scss */
+.search_area {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+
+/* line 10, ../sass/search_area.scss */
+.search_wrapper {
+  position: relative;
+  width: 1000px;
+  height: 100px;
+  margin-left: 12%;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+/* line 21, ../sass/search_area.scss */
+.search {
+  display: block;
+  margin: 10px 10px;
+  border-right: 1px solid #999;
+}
+/* line 25, ../sass/search_area.scss */
+.search p {
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-family: "Arvo", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 90%;
+}
+
+/* line 34, ../sass/search_area.scss */
+.search.places {
+  height: 80px;
+  width: 430px;
+}
+
+/* line 39, ../sass/search_area.scss */
+.search.time {
+  height: 80px;
+  width: 180px;
+  margin-left: 450px;
+  margin-top: -90px;
+}
+
+/* line 46, ../sass/search_area.scss */
+.search.foodtype {
+  height: 80px;
+  width: 250px;
+  margin-left: 640px;
+  margin-top: -90px;
+}
+
+/* line 53, ../sass/search_area.scss */
+.search.button {
+  height: 80px;
+  width: 80px;
+  margin-left: 903px;
+  margin-top: -80px;
+  border-right: 0px;
+}
+
+/* line 61, ../sass/search_area.scss */
+.red {
+  background-color: #E74C3C;
+  border-bottom: 5px solid #BD3E31;
+  text-shadow: 0px -2px #BD3E31;
+}
+
+/* line 67, ../sass/search_area.scss */
+.action-button {
+  text-decoration-line: none;
+  position: relative;
+  padding: 10px 10px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 78, ../sass/search_area.scss */
+.action-button:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 83, ../sass/search_area.scss */
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid;
+}
+
+/* line 90, ../sass/search_area.scss */
+.search-field {
+  width: 95%;
+  display: block;
+  padding: .5em 10px;
+  font-size: 130%;
+  font-family: "Arvo", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+  color: #3e8ce0;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+/* line 103, ../sass/search_area.scss */
+.search-field:focus {
+  border-bottom: 1.2px solid #999;
+  outline: none;
+}
+
+/* line 109, ../sass/search_area.scss */
+.welcome_block {
+  width: 80%;
+  height: 50px;
+  left: 10%;
+  margin-left: 20%;
+}
+/* line 115, ../sass/search_area.scss */
+.welcome_block h2 {
+  margin-left: 40px;
+  color: black;
+  font-family: "Arvo", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 300%;
+}
+
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/horizontal_list.scss */
+body {
+  font-size: 1em;
+  background: #e8e8e8;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* line 18, ../sass/horizontal_list.scss */
+#home-header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/foodtable.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: orange;
+}
+
+/* line 28, ../sass/horizontal_list.scss */
+#home-navbar {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #3D6AA2;
+}
+
+/* line 39, ../sass/horizontal_list.scss */
+#home-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+/* line 46, ../sass/horizontal_list.scss */
+#home-logotext {
+  position: absolute;
+  display: inline;
+  left: 60px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: orange;
+  font-weight: bold;
+  text-emphasis-color: red;
+  margin-top: 25px;
+  top: -20px;
+}
+
+/* line 59, ../sass/horizontal_list.scss */
+#home-becomechef {
+  display: inline;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: orange;
+  text-align: right;
+  float: right;
+  margin: 12px;
+  margin-top: 10px;
+  border: 2px solid orange;
+  padding: 8px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* line 74, ../sass/horizontal_list.scss */
+#home-becomechef:visited {
+  text-decoration: none;
+  color: orange;
+  font-family: sans-serif;
+}
+
+/* line 80, ../sass/horizontal_list.scss */
+#home-becomechef:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 84, ../sass/horizontal_list.scss */
+.home-navmenu {
+  display: inline;
+  font-family: sans-serif;
+  color: black;
+  text-decoration: none;
+  float: right;
+  margin: 12px;
+  margin-top: 12px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* line 96, ../sass/horizontal_list.scss */
+.home-navmenu:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 100, ../sass/horizontal_list.scss */
+#home-welcometext-div {
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  top: 40%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -400px;
+}
+
+/* line 110, ../sass/horizontal_list.scss */
+#home-welcomefoodcourt {
+  color: orange;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 120, ../sass/horizontal_list.scss */
+#home-firststranger-thenfriends {
+  color: orange;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: -25px;
+}
+
+/* line 129, ../sass/horizontal_list.scss */
+#home-getstarted {
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  top: 65%;
+  margin-top: 20px;
+}
+
+/* line 138, ../sass/horizontal_list.scss */
+#home-getstarted:link {
+  font-family: sans-serif;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 50%;
+  margin-right: -60px;
+}
+
+/* line 151, ../sass/horizontal_list.scss */
+#home-getstarted:visited {
+  font-family: sans-serif;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 2px;
+}
+
+/* line 159, ../sass/horizontal_list.scss */
+#home-getstarted:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 163, ../sass/horizontal_list.scss */
+#home-searchdiv {
+  position: absolute;
+  width: 760px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+/* line 172, ../sass/horizontal_list.scss */
+#home-searchbar {
+  position: absolute;
+  width: 600px;
+  height: 40px;
+  background-color: white;
+  top: 53%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -350px;
+  border-radius: 3px;
+}
+
+/* line 184, ../sass/horizontal_list.scss */
+#home-searchbox {
+  position: absolute;
+  width: 760px;
+  height: 35px;
+  margin-top: -3px;
+}
+
+/* line 191, ../sass/horizontal_list.scss */
+#home-search_text {
+  color: grey;
+  font-family: sans-serif;
+  margin-left: 15px;
+  font-size: 20px;
+  z-index: 0;
+  margin-top: 8px;
+  text-align: left;
+}
+
+/* line 201, ../sass/horizontal_list.scss */
+#home-search-button {
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  float: right;
+  margin-left: 590px;
+  z-index: 0;
+  margin-top: -1px;
+}
+
+/* line 211, ../sass/horizontal_list.scss */
+#search-button {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: bold;
+  background-color: orange;
+  text-decoration: none;
+  padding: 11px 30px 11px 30px;
+}
+
+/* line 220, ../sass/horizontal_list.scss */
+#search-button:visited {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+/* line 226, ../sass/horizontal_list.scss */
+#search-button:hover {
+  background-color: darkorange;
+}
+
+/* line 230, ../sass/horizontal_list.scss */
+#home-seach-options {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: bold;
+  text-decoration: none;
+  margin-top: -30px;
+  margin-left: -10px;
+}
+
+/* line 239, ../sass/horizontal_list.scss */
+.home-search-option-box {
+  position: absolute;
+  display: inline;
+  width: 190px;
+  height: 80px;
+  border-right: 1px solid white;
+  margin-top: 30px;
+  top: 20%;
+  text-align: center;
+}
+
+/* line 250, ../sass/horizontal_list.scss */
+.home-search-option-box:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 254, ../sass/horizontal_list.scss */
+#search-chef-box {
+  margin-left: 10px;
+}
+
+/* line 258, ../sass/horizontal_list.scss */
+.search-text {
+  text-align: center;
+  display: inline;
+  font-family: sans-serif;
+  text-decoration: none;
+  float: right;
+  padding: 8px;
+  font-weight: lighter;
+  margin-top: -15px;
+  margin-right: 15px;
+}
+
+/* line 270, ../sass/horizontal_list.scss */
+#search-chef {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* line 275, ../sass/horizontal_list.scss */
+.search-logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+
+/* line 281, ../sass/horizontal_list.scss */
+#search-chef-logo {
+  top: 30%;
+  right: 30%;
+}
+
+/* line 286, ../sass/horizontal_list.scss */
+.search-text:visited {
+  color: white;
+}
+
+/* line 290, ../sass/horizontal_list.scss */
+#search-food-logo {
+  top: 30%;
+}
+
+/* line 294, ../sass/horizontal_list.scss */
+#search-food-box {
+  margin-left: 200px;
+}
+
+/* line 298, ../sass/horizontal_list.scss */
+#search-food:visited {
+  color: white;
+  text-align: center;
+}
+
+/* line 303, ../sass/horizontal_list.scss */
+#search-place-box {
+  margin-left: 390px;
+}
+
+/* line 307, ../sass/horizontal_list.scss */
+#search-place-logo {
+  margin-right: 10px;
+}
+
+/* line 311, ../sass/horizontal_list.scss */
+#search-place {
+  margin-right: 33px;
+}
+
+/* line 315, ../sass/horizontal_list.scss */
+#search-learnmore-box {
+  position: absolute;
+  display: inline;
+  width: 190px;
+  height: 80px;
+  margin-top: 30px;
+  top: 20%;
+  text-align: center;
+  margin-left: 580px;
+}
+
+/* line 326, ../sass/horizontal_list.scss */
+#search-learnmore-box:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 330, ../sass/horizontal_list.scss */
+#search-learnmore-logo {
+  margin-right: 19px;
+}
+
+/* line 334, ../sass/horizontal_list.scss */
+#search-learnmore {
+  margin-right: 19px;
+}
+
+/* line 338, ../sass/horizontal_list.scss */
+#body-wrapper {
+  position: relative;
+  margin-top: -20px;
+}
+
+/* line 343, ../sass/horizontal_list.scss */
+.nav-tabs {
+  margin-left: 50px;
+}
+
+/* line 347, ../sass/horizontal_list.scss */
+.content-wrapper {
+  width: 100%;
+  margin: 2% auto;
+  margin-top: 300px;
+}
+
+/* line 353, ../sass/horizontal_list.scss */
+* {
+  -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
+  -o-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -o-transform;
+  -webkit-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -webkit-transform;
+  transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* line 367, ../sass/horizontal_list.scss */
+#newest-disc-tab {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* line 372, ../sass/horizontal_list.scss */
+.cards {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 1.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 386, ../sass/horizontal_list.scss */
+.card {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  background: #fefff9;
+  color: #363636;
+  text-decoration: none;
+  -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (max-width: 700px) {
+  /* line 386, ../sass/horizontal_list.scss */
+  .card {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  /* line 386, ../sass/horizontal_list.scss */
+  .card {
+    max-width: 320px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  /* line 402, ../sass/horizontal_list.scss */
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 980px) {
+  /* line 407, ../sass/horizontal_list.scss */
+  .card:nth-child(even) {
+    margin-right: 20px;
+  }
+  /* line 410, ../sass/horizontal_list.scss */
+  .card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+/* line 414, ../sass/horizontal_list.scss */
+.card span {
+  display: block;
+}
+/* line 417, ../sass/horizontal_list.scss */
+.card .card-summary {
+  padding: 5% 5% 3% 5%;
+}
+/* line 420, ../sass/horizontal_list.scss */
+.card .card-summary p {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+/* line 426, ../sass/horizontal_list.scss */
+.card .card-header {
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  background-blend-mode: overlay;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+}
+/* line 436, ../sass/horizontal_list.scss */
+.card .card-header:hover, .card .card-header:focus {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* line 440, ../sass/horizontal_list.scss */
+.card .card-title {
+  background: rgba(255, 255, 255, 0.45);
+  padding: 3.5% 0 2.5% 0;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  top: 0;
+  height: 70px;
+  width: 100%;
+}
+/* line 450, ../sass/horizontal_list.scss */
+.card .card-title h3 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 0 3.5%;
+  margin: 0;
+}
+/* line 457, ../sass/horizontal_list.scss */
+.card .card-meta {
+  max-height: 0;
+  overflow: hidden;
+  color: #666;
+  font-size: .78em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 2%;
+  padding: 0 5%;
+  -moz-transition-property: max-height;
+  -o-transition-property: max-height;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 470, ../sass/horizontal_list.scss */
+.card:hover, .card:focus {
+  background: white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+}
+/* line 473, ../sass/horizontal_list.scss */
+.card:hover .card-title, .card:focus .card-title {
+  background: rgba(157, 187, 63, 0.95);
+}
+/* line 476, ../sass/horizontal_list.scss */
+.card:hover .card-meta, .card:focus .card-meta {
+  max-height: 2em;
+}
+
+/* line 482, ../sass/horizontal_list.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 486, ../sass/horizontal_list.scss */
+.card-chef-name {
+  margin: 0;
+  height: 80px;
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 35px;
+  position: relative;
+}
+
+/* line 496, ../sass/horizontal_list.scss */
+.card-chef-name h5,
+.card-chef-name span {
+  left: 25%;
+  position: absolute;
+  opacity: 0.8;
+  padding: 3px 5px;
+  margin-top: -20px;
+}
+
+/* line 505, ../sass/horizontal_list.scss */
+.card-chef-name h5 {
+  text-transform: uppercase;
+  bottom: 70%;
+  margin: 0;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* line 513, ../sass/horizontal_list.scss */
+.card-chef-name span {
+  font-size: 0.8em;
+  color: #ffffff;
+  top: 50%;
+}
+
+/* line 519, ../sass/horizontal_list.scss */
+.card-chef-name img {
+  max-width: 100%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+  margin-top: -6px;
+}
+
+/* line 537, ../sass/horizontal_list.scss */
+.disc-rating {
+  width: 140px;
+  height: 25px;
+  bottom: 0px;
+  float: right;
+  margin-top: 20px;
+  margin-right: -20px;
+}
+
+/* line 546, ../sass/horizontal_list.scss */
+.rating {
+  margin: 10px 0;
+}
+
+/* line 550, ../sass/horizontal_list.scss */
+.rating i {
+  display: inline-block;
+  width: 0;
+  height: 1em;
+  border-width: 0 0.5em;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: .22em;
+  color: white;
+  background: #eee;
+  font-style: normal;
+  line-height: 1.1em;
+  text-indent: -0.5em;
+  text-shadow: 1px 0 1px #b3b3b3;
+}
+
+/** Colors */
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='1'] .star-1 {
+  border-color: #cc8b1f;
+  background: #cc8b1f;
+}
+
+/* line 581, ../sass/horizontal_list.scss */
+[data-rating^='1.5'] .star-2 {
+  border-left-color: #cc8b1f;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='2'] .star-1 {
+  border-color: #dcb228;
+  background: #dcb228;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='2'] .star-2 {
+  border-color: #dcb228;
+  background: #dcb228;
+}
+
+/* line 581, ../sass/horizontal_list.scss */
+[data-rating^='2.5'] .star-3 {
+  border-left-color: #dcb228;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='3'] .star-1 {
+  border-color: #f0991e;
+  background: #f0991e;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='3'] .star-2 {
+  border-color: #f0991e;
+  background: #f0991e;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='3'] .star-3 {
+  border-color: #f0991e;
+  background: #f0991e;
+}
+
+/* line 581, ../sass/horizontal_list.scss */
+[data-rating^='3.5'] .star-4 {
+  border-left-color: #f0991e;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='4'] .star-1 {
+  border-color: #f26a2c;
+  background: #f26a2c;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='4'] .star-2 {
+  border-color: #f26a2c;
+  background: #f26a2c;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='4'] .star-3 {
+  border-color: #f26a2c;
+  background: #f26a2c;
+}
+
+/* line 575, ../sass/horizontal_list.scss */
+[data-rating^='4'] .star-4 {
+  border-color: #f26a2c;
+  background: #f26a2c;
+}
+
+/* line 581, ../sass/horizontal_list.scss */
+[data-rating^='4.5'] .star-5 {
+  border-left-color: #f26a2c;
+}
+
+/* line 586, ../sass/horizontal_list.scss */
+[data-rating="5"] i {
+  background: #dd050b;
+  border-color: #dd050b;
+}
+
+/** Print */
+@media print {
+  /* line 594, ../sass/horizontal_list.scss */
+  .rating {
+    -webkit-print-color-adjust: exact;
+  }
+  /* line 596, ../sass/horizontal_list.scss */
+  .rating i {
+    text-shadow: none;
+  }
+}
+/* line 602, ../sass/horizontal_list.scss */
+.horizontal-slide-div {
+  position: relative;
+  margin: 3em 0;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+/* line 610, ../sass/horizontal_list.scss */
+.horizontal-scrollbar {
+  margin: 0 0 1em 0;
+  height: 2px;
+  background: #ccc;
+  line-height: 0;
+}
+
+/* line 617, ../sass/horizontal_list.scss */
+.horizontal-scrollbar .hscroll-handle {
+  width: 100px;
+  height: 100%;
+  background: #292a33;
+  cursor: pointer;
+}
+
+/* line 624, ../sass/horizontal_list.scss */
+.horizontal-scrollbar .hscroll-handle .hscroll-mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 90%;
+  height: 20px;
+}
+
+/* line 632, ../sass/horizontal_list.scss */
+.frame {
+  height: 300px;
+  line-height: 300px;
+  overflow: hidden;
+}
+
+/* line 638, ../sass/horizontal_list.scss */
+.frame ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+/* line 646, ../sass/horizontal_list.scss */
+.frame ul li {
+  float: left;
+  width: 327px;
+  height: 100%;
+  margin: 0 20px 0 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 658, ../sass/horizontal_list.scss */
+.circle {
+  width: 5px;
+  height: 5px;
+  background-color: limegreen;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+/* line 666, ../sass/horizontal_list.scss */
+.status {
+  color: grey;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+/* line 673, ../sass/horizontal_list.scss */
+.frame a .card-title {
+  background: rgba(253, 234, 215, 0.9);
+}
+/* line 677, ../sass/horizontal_list.scss */
+.frame a .card-status-div {
+  width: 100px;
+  height: 15px;
+  display: inline;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+}
+/* line 687, ../sass/horizontal_list.scss */
+.frame a .card-status-div .status {
+  margin-left: 8px;
+  margin-top: -8px;
+}
+/* line 692, ../sass/horizontal_list.scss */
+.frame a .card-meta {
+  max-height: 0;
+  overflow: hidden;
+  color: #666;
+  font-size: .78em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 2%;
+  padding: 0 5%;
+  -moz-transition-property: max-height;
+  -o-transition-property: max-height;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 706, ../sass/horizontal_list.scss */
+.frame a .card-title span {
+  color: brown;
+  margin-top: -28px;
+}
+/* line 711, ../sass/horizontal_list.scss */
+.frame a .card-title h5 {
+  margin-bottom: 5px;
+}
+/* line 715, ../sass/horizontal_list.scss */
+.frame a .disc-rating {
+  font-size: 10px;
+  margin-right: 65px;
+  margin-top: -12px;
+}
+/* line 721, ../sass/horizontal_list.scss */
+.frame a .rating p {
+  text-transform: lowercase;
+  color: grey;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-left: 70px;
+  margin-top: -20px;
+}
+/* line 730, ../sass/horizontal_list.scss */
+.frame a:hover, .frame a:focus {
+  background: white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+}
+/* line 733, ../sass/horizontal_list.scss */
+.frame a:hover .card-title, .frame a:focus .card-title {
+  background: rgba(239, 155, 72, 0.4);
+}
+/* line 736, ../sass/horizontal_list.scss */
+.frame a:hover .card-meta, .frame a:focus .card-meta {
+  max-height: 2em;
+}
+
+/* line 742, ../sass/horizontal_list.scss */
+.swiper-button-next, .swiper-button-prev {
+  z-index: 999;
+  margin-right: 3%;
+}
