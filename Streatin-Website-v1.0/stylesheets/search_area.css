@@ -1,12 +1,11 @@
 /* line 3, ../sass/search_area.scss */
 .search_area {
-  position: absolute;
   width: 100%;
   height: 300px;
   background-color: white;
 }
 
-/* line 10, ../sass/search_area.scss */
+/* line 9, ../sass/search_area.scss */
 .search_wrapper {
   position: relative;
   width: 1000px;
@@ -18,13 +17,13 @@
   border: 1px solid #999;
 }
 
-/* line 21, ../sass/search_area.scss */
+/* line 20, ../sass/search_area.scss */
 .search {
   display: block;
   margin: 10px 10px;
   border-right: 1px solid #999;
 }
-/* line 25, ../sass/search_area.scss */
+/* line 24, ../sass/search_area.scss */
 .search p {
   margin-left: 10px;
   color: black;
@@ -33,13 +32,13 @@
   font-size: 90%;
 }
 
-/* line 34, ../sass/search_area.scss */
+/* line 33, ../sass/search_area.scss */
 .search.places {
   height: 80px;
   width: 430px;
 }
 
-/* line 39, ../sass/search_area.scss */
+/* line 38, ../sass/search_area.scss */
 .search.time {
   height: 80px;
   width: 180px;
@@ -47,7 +46,7 @@
   margin-top: -90px;
 }
 
-/* line 46, ../sass/search_area.scss */
+/* line 45, ../sass/search_area.scss */
 .search.foodtype {
   height: 80px;
   width: 250px;
@@ -55,7 +54,7 @@
   margin-top: -90px;
 }
 
-/* line 53, ../sass/search_area.scss */
+/* line 52, ../sass/search_area.scss */
 .search.button {
   height: 80px;
   width: 80px;
@@ -64,14 +63,14 @@
   border-right: 0px;
 }
 
-/* line 61, ../sass/search_area.scss */
+/* line 60, ../sass/search_area.scss */
 .red {
   background-color: #E74C3C;
   border-bottom: 5px solid #BD3E31;
   text-shadow: 0px -2px #BD3E31;
 }
 
-/* line 67, ../sass/search_area.scss */
+/* line 66, ../sass/search_area.scss */
 .action-button {
   text-decoration-line: none;
   position: relative;
@@ -83,19 +82,19 @@
   color: #FFF;
   text-decoration: none;
 }
-/* line 78, ../sass/search_area.scss */
+/* line 77, ../sass/search_area.scss */
 .action-button:hover {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 83, ../sass/search_area.scss */
+/* line 82, ../sass/search_area.scss */
 .action-button:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
   border-bottom: 1px solid;
 }
 
-/* line 90, ../sass/search_area.scss */
+/* line 89, ../sass/search_area.scss */
 .search-field {
   width: 95%;
   display: block;
@@ -109,20 +108,20 @@
   border-left: 0px;
   border-right: 0px;
 }
-/* line 103, ../sass/search_area.scss */
+/* line 102, ../sass/search_area.scss */
 .search-field:focus {
   border-bottom: 1.2px solid #999;
   outline: none;
 }
 
-/* line 109, ../sass/search_area.scss */
+/* line 108, ../sass/search_area.scss */
 .welcome_block {
   width: 80%;
   height: 50px;
   left: 10%;
   margin-left: 20%;
 }
-/* line 115, ../sass/search_area.scss */
+/* line 114, ../sass/search_area.scss */
 .welcome_block h2 {
   margin-left: 40px;
   color: black;

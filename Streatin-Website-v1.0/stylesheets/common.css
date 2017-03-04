@@ -37,7 +37,26 @@
 /* line 38, ../sass/common.scss */
 #footer {
   width: 100%;
-  height: 500px;
+  height: 400px;
+  margin-top: 20px;
   background-color: grey;
   background-size: 100% 100%;
+}
+
+/* line 46, ../sass/common.scss */
+.text-wrapper {
+  position: relative;
+  margin: auto;
+  padding: 20px 0;
+  width: 80%;
+  min-height: 100px;
+  text-align: center;
+  color: black;
+  background-color: orange;
+  border-radius: 50px;
+}
+
+/* line 57, ../sass/common.scss */
+.text-bold {
+  font-weight: 700;
 }

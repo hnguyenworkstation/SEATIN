@@ -347,7 +347,7 @@ body {
 .content-wrapper {
   width: 100%;
   margin: 2% auto;
-  margin-top: 300px;
+	margin-top: -5%;
 }
 
 * {
@@ -445,7 +445,7 @@ body {
 		text-transform: uppercase;
 		position: relative;
 		top: 0;
-    height: 70px;
+    height: 300px;
 		width: 100%;
 		h3 {
 			font-size: 1.2em;
@@ -483,6 +483,18 @@ img {
 	max-width: 100%;
 }
 
+.card-actions {
+	margin: 0;
+  height: 100px;
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 35px;
+  position: relative;
+	background-color: aqua;
+	margin-top: -20px;
+}
+
 .card-chef-name {
   margin: 0;
   height: 80px;
@@ -509,6 +521,8 @@ img {
   font-weight: 800;
   color: #000000;
 }
+
+
 
 .card-chef-name span {
   font-size: 0.8em;
@@ -630,7 +644,7 @@ $star-width: 1em;
 }
 
 .frame {
-  height: 300px;
+  height: 400px;
   line-height: 300px;
   overflow: hidden;
 }
@@ -680,7 +694,7 @@ $star-width: 1em;
     display: inline;
     float: right;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: -20px;
     font-size: 12px;
   }
   

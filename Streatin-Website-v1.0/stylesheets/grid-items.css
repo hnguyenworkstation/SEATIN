@@ -1,0 +1,51 @@
+/* line 1, ../sass/grid-items.scss */
+.grid-items {
+  margin-top: 20px;
+}
+/* line 9, ../sass/grid-items.scss */
+.grid-items .item__metadata {
+  padding: 10px 30px;
+}
+/* line 12, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col {
+  margin-right: 15px;
+  width: 25%;
+}
+/* line 16, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+/* line 21, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col .ratings {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+/* line 25, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col .ratings p {
+  margin: 0;
+  padding: 0;
+}
+/* line 29, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col .ratings .stars {
+  color: #ff8301;
+}
+/* line 32, ../sass/grid-items.scss */
+.grid-items .item__metadata .left-col .ratings .number-reviews {
+  font-weight: 700;
+}
+/* line 37, ../sass/grid-items.scss */
+.grid-items .item__metadata .right-col {
+  width: 70%;
+  font-size: 13px;
+}
+/* line 41, ../sass/grid-items.scss */
+.grid-items .item__metadata .right-col p {
+  margin: 0;
+  padding: 0;
+}
+/* line 49, ../sass/grid-items.scss */
+.grid-items .row + .row {
+  margin-top: 20px;
+}
