@@ -1,116 +1,184 @@
-from . import db
-import datetime
-from werkzeug.security import generate_password_hash, check_password_hash
-
-#[TODO]: add function from id to md5 url
-
-class User(db.Model):
-	__tablename__ = 'users'
-	#authenticate info
-	id            = db.Column(db.BigInteger, primary_key=True)
-	username      = db.Column(db.String(64), unique=True, index=True)
-	email         = db.Column(db.String(50), nullable=False)
-	password_hash = db.Column(db.String(128))
-	role_id       = db.Column(db.Integer, db.ForeignKey('roles.id'))
-	
-	#personal info
-	first_name    = db.Column(db.Unicode(60), nullable = False)
-	middle_name   = db.Column(db.Unicode(40), nullable = True)
-	last_name     = db.Column(db.Unicode(60), nullable = False
-	sex           = db.Column(db.Enum('M', 'O', 'F', name='gender_enum', create_type=False)) #O is other
-	joined_date   = db.Column(db.DateTime, default = datetime.datetime.now())
-	badge_id      = db.Column(db.Int, db.ForeignKey('badge.id'), default = 0)
-	avatar_img    = db.Column(db.BigInteger, ForeignKey('images.id'))
-	phone         = db.Column(db.String(20), nullable=False)
-	
-	#location info
-	location      = db.relationship('Location', backref='user', lazy='dynamic')
-	
-	#number of reviews
-	count_review  = db.Column(db.Integer, default = 0)
-	
-	@property
-	def password(self):
-		raise AttributeError('password is not a readable attribute')
-	
-	@password.setter
-	def password(self, password):
-		self.password_hash = generate_password_hash(password)
-		
-	def verify_password(self, password):
-		return check_password_hash(self.password_hash, password)
-		
-	def __repr__(self):
-	  return '<User %r>' % self.username
+from . import db, login_manager
+from flask import current_app
+from datetime import datetime
+from werkzeug.security import generate_password_hash, \
+                              check_password_hash
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from flask_login import UserMixin, AnonymousUserMixin
+ROLES = {
+    # users
+    'Foody' :            0b0001,
+    'Gourmet' :          0b0011, # write expert review
+    'Chef' :             0b0101, # 0b0101
+    'Super Chef' :       0b1101, # 0b1101 access to subcription model
+    # website service
+    'Customer Service' : 0b0001*0x10, # view user info, delete transaction
+    'Content_Editor' :   0b0011*0x10, # delete bad review, bad menu
+    'Publisher' :        0x0100*0x10, # write, edit articles for user and chef
+    'Moderator' :        0x1111*0x10, # ban users and all of the above
+    # website maintainer
+    'Administrator' :    0xfff
+}
 
 class Role(db.Model):
-  __tablename__ = 'roles'
-  id            = db.Column(db.Integer, primary_key=True)
-  desc          = db.Column(db.Unicode(64), unique=True)
-  users         = db.relationship('User', backref='role', lazy='dynamic')
+    __tablename__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    permissions = db.Column(db.Integer)
+    users = db.relationship('User', backref='role', lazy='dynamic')
 
-  def __repr__(self):
-    return '<Role %r>' % self.desc
+    @staticmethod
+    def insert_roles():
+        for r in ROLES:
+            role = Role.query.filter_by(name=r).first()
+            if role is None:
+                role = Role(name=r)
+            role.permissions = ROLES[r]
+            db.session.add(role)
+        db.session.commit()
 
-class Badge(db.Model):
-	__tablename__ = 'badges'
-	id            = db.Column(db.Integer, primary_key=True)
-	name          = db.Column(db.Unicode(64), unique=True)
-	users         = relationship('User', backref='badge', lazy='dynamic')
-	
-	def __repr__(self):
-    return '<Badge %r>' % self.name
 
-class Product(db.Model):
-	__tablename__ = 'products'
-	id            = db.Column(db.BigInteger, primary_key=True)
-	name          = db.Column(db.Unicode(30))
-	price         = db.Column(db.Float, default=0.0)
-	option        = db.Column(db.Enum("E", "S", "P",name="dining_option_enum", create_type=False) #E: eat in; S: SMode, P: Pickup
-	desc          = db.Column(db.String(100))
-	diners        = db.Column(db.Integer)
-	imgs          = db.relationship('Image'   , backerf = 'products', lazy='dynamic')
-	
-	location      = db.relationship('Location', backref = 'products', lazy='dynamic')
-	reviews       = db.relationship('Review'  , backref = 'products', lazy='dynamic')
+class User(UserMixin, db.Model):
+    __tablename__ = 'users'
+    # authenticate info
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(50), unique=True, index=True)
+    password_hash = db.Column(db.String(128))
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    confirmed = db.Column(db.Boolean, default=False)
+    name = db.Column(db.String(64))
+    member_since = db.Column(db.DateTime(), default=datetime.utcnow)
 
-class Location(db.Model):
-	#location info
-	__tablename__ = 'locations'
-	id            = db.Column(db.Integer, primary_key=True)
-	address1      = db.Column(db.Unicode(90), nullable=False)
-	address2      = db.Column(db.Unicode(50), nullable=True)
-	city          = db.Column(db.Unicode(60), nullable=False)
-	state         = db.Column(db.Unicode(10))
-	postalCode    = db.Column(db.Integer, nullable=False)
-	country       = db.Column(db.Unicode(30), nullable=False)
-	latitude      = db.Column(db.Float)
-	longtitude    = db.Column(db.Float)
-	user_id       = db.Column(db.Integer   , db.ForeignKey('users.id'))
-	product_id    = db.Column(db.BigInteger, db.ForeignKey('products.id'))
-	
-	def __repr__(self):
-		return '<Location %r %r %r>' % (self.address1,self.city, self.country) 
+    @staticmethod
+    def generate_fake(count=100):
+        from sqlalchemy.exc import IntegrityError
+        from random import seed
+        import forgery_py
 
-class Image(db.Model):
-	__tablename__ = 'images'
-	id            = db.Column(db.BigInteger, primary_key=True)
-	desc          = db.Column(db.String(30), nullable=True)
-	product_id    = db.Column(db.BigInteger, ForeignKey('product.id'))
-	
-	def __repr__(self):
-		return '<Image %r %r>' %(self.id, self.desc)
-	
-class Review(db.Model):
-	__tablename__ = 'reviews'
-	id            = db.Column(db.BigInteger  , primary_key=True)
-	content       = db.Column(db.Unicode(200), nullable = True)
-	upvote        = db.Column(db.Integer     , default = 0)
-	timestamp     = db.Column(db.DateTime    , default=datetime.datetime.now(), nullable=False)
-	product_id    = db.Column(db.BigInteger  , db.ForeignKey('products.id'))
-	rating_star   = db.Column(db.Integer)
-	
-	def __repr__(self):
-		return '<Review %r %r>' % (self.id, self.content)
+        seed()
+        for i in xrange(count):
+            u = User(email=forgery_py.internet.email_address(),
+                     username=forgery_py.internet.user_name(True),
+                     password=forgery_py.lorem_ipsum.word(),
+                     confirmed=True,
+                     name=forgery_py.name.full_name(),
+                     member_since=forgery_py.date.date(True))
+            db.session.add(u)
+            try:
+                db.session.commit()
+            except IntegrityError:
+                db.session.rollback()
 
-    	
+    @property
+    def password(self):
+        raise AttributeError('password is not a readable attribute')
+
+    @password.setter
+    def password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+    def generate_confirmation_token(self, expiration=3600):
+        s = Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'confirm': self.id})
+
+    def confirm(self, token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except Exception:
+            return False
+        if data.get('confirm') != self.id:
+            return False
+        self.confirmed = True
+        db.session.add(self)
+        return True
+
+    def generate_reset_token(self, expiration=3600):
+        s = Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'reset': self.id})
+
+    def reset_password(self, token, new_password):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except Exception:
+            return False
+        if data.get('reset') != self.id:
+            return False
+        self.password = new_password
+        db.session.add(self)
+        return True
+
+    def generate_email_change_token(self, new_email, expiration=3600):
+        s = Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'change_email': self.id, 'new_email': new_email})
+
+    def change_email(self, token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except:
+            return False
+        if data.get('change_email') != self.id:
+            return False
+        new_email = data.get('new_email')
+        if new_email is None:
+            return False
+        if self.query.filter_by(email=new_email).first() is not None:
+            return False
+        self.email = new_email
+        db.session.add(self)
+        return True
+
+    def generate_auth_token(self, expiration):
+        s = Serializer(current_app.config['SECRET_KEY'],
+                       expires_in=expiration)
+        return s.dumps({'id': self.id}).decode('ascii')
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except:
+            return None
+        return User.query.get(data['id'])
+
+    def __init__(self, **kwargs):
+        super(User, self).__init__(**kwargs)
+        if self.role is None:
+            if self.email == current_app.config['STREATIN_ADMIN']:
+                self.role = Role.query.filter_by(permissions=ROLES['Administrator']).first()
+            if self.role is None:
+                self.role = Role.query.filter_by(name='Foody').first()
+
+    def is_(self, role):
+        return self.role is not None and \
+               (self.role.permissions & role) == role
+
+    def is_administrator(self):
+        return self.is_(ROLES['Administrator'])
+
+    def ping(self):
+        self.last_seen = datetime.utcnow()
+        db.session.add(self)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+class AnonymousUser(AnonymousUserMixin):
+    def is_(self, role):
+        return False
+
+    def is_administrator(self):
+        return False
+
+login_manager.anonymous_user = AnonymousUser
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
